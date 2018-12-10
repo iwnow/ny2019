@@ -1,0 +1,33 @@
+@font-face {
+    font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+    src: url(/src/styles/fonts/NOTO_SANS_EXTLIGHT_REGULAR.ttf);
+}
+
+@font-face {
+    font-family: NOTO_SANS_LIGHT_REGULAR;
+    src: url(/src/styles/fonts/NOTO_SANS_LIGHT_REGULAR.ttf);
+}
+
+@font-face {
+    font-family: NOTO_SANS_REGULAR;
+    src: url(/src/styles/fonts/NOTO_SANS_REGULAR.ttf);
+}
+
+@font-face {
+    font-family: NOTO_SANS_SEMBD_REGULAR;
+    src: url(/src/styles/fonts/NOTO_SANS_SEMBD_REGULAR.ttf);
+}
+
+.fo-b-reg {
+	font-family: NOTO_SANS_SEMBD_REGULAR;
+}
+.fo-reg {
+	font-family: NOTO_SANS_REGULAR;
+}
+.fo-lig {
+	font-family: NOTO_SANS_LIGHT_REGULAR;
+}
+.fo-e-lig {
+	font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+}
+

@@ -1,3 +1,12 @@
 import '../styles/index.scss';
+import * as $ from 'jquery';
+import {api} from './api';
 
-console.log('webpack starterkit');
+(() => {
+    api.getUser().then(start).catch(console.error);
+
+    function start({ userName }) {
+        
+        $('#userName').text((userName || '').toUpperCase());
+    }
+})();

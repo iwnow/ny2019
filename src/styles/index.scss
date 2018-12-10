@@ -1,65 +1,96 @@
-@font-face {
-    font-family: NOTO_SANS_EXTLIGHT_REGULAR;
-    src: url(/src/fonts/NOTO_SANS_EXTLIGHT_REGULAR.ttf);
+@import '../../node_modules/normalize-scss/sass/normalize/import-now';
+@import 'font';
+
+html, body {
+	height: 100vh;
+	width: 100vw;
+	max-width: 100vw;
+	max-height: 100vh;
+	min-width: 100vw;
+	min-height: 100vh;
+	position: relative;
+
+	.bg {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		opacity: .5;
+		background-image:
+			radial-gradient(
+				#f1f1f1,
+				#d0d0d0
+			);
+	}
 }
 
-@font-face {
-    font-family: NOTO_SANS_LIGHT_REGULAR;
-    src: url(/src/fonts/NOTO_SANS_LIGHT_REGULAR.ttf);
+.confeti {
+	position: absolute;
+	z-index: 0;
 }
-
-@font-face {
-    font-family: NOTO_SANS_REGULAR;
-    src: url(/src/fonts/NOTO_SANS_REGULAR.ttf);
+.confeti-1 {
+	background-image: url(/src/styles/img/confeti-1.png);
+	bottom: 0;
+	left: 10px;
+	height: 40px;
+	width: 123px;
 }
-
-@font-face {
-    font-family: NOTO_SANS_SEMBD_REGULAR;
-    src: url(/src/fonts/NOTO_SANS_SEMBD_REGULAR.ttf);
+.confeti-2 {
+	height: 73px;
+	width: 97px;
+	bottom: 0;
+    right: 0;
+	background-image: url(/src/styles/img/confeti-2.png);
 }
-
-body, html {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
+.confeti-3 {
+	height: 81px;
+	width: 63px;
+	background-image: url(/src/styles/img/confeti-3.png);
+	left: 0;
+    top: 100px;
+}
+.confeti-4 {
+	background-image: url(/src/styles/img/confeti-4.png);
+	height: 52px;
+	width: 87px;
+	top: 0;
+    left: 60px;
+}
+.confeti-5 {
+	background-image: url(/src/styles/img/confeti-5.png);
+	height: 66px;
+	width: 61px;
+	top: 0;
+    right: 80px;
+}
+.confeti-6 {
+	background-image: url(/src/styles/img/confeti-6.png);
+	height: 70px;
+	width: 80px;
+	top: 120px;
+    right: 20px;
 }
 
 .first-screen {
-  	position: relative;
-	width: 100%;
 	height: 100%;
-	background: #d7d7d7; /* Old browsers */
-	background: -moz-linear-gradient(45deg, #d7d7d7 0%, #d5d5d5 100%);
-	background: -webkit-linear-gradient(45deg, #d7d7d7 0%,#d5d5d5 100%);
-	background: linear-gradient(45deg, #d7d7d7 0%,#d5d5d5 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7d7d7', endColorstr='#d5d5d5',GradientType=1 );
-	h1, h2 {
-		margin: 0;
-	}
-	h1 {
-		margin-bottom: 34px;
-	}
-	.name {
-		color: #a83e4f;
-		font-family: NOTO_SANS_EXTLIGHT_REGULAR;
-		font-size: 48px;
-	}
-	.question {
-		color: #2e3237;
-		font-family: NOTO_SANS_LIGHT_REGULAR;
-		font-size: 24px;
-	}
-	.name, .question {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.label-wrapper {
 		text-align: center;
 	}
-	.label-wrapper {
-		letter-spacing: 10px;
-		position: relative;
-  		top: 50%;
-  		width: 301px;
-  		height: 91px;
-  		margin: 0 auto;
-  		margin-top: -45.5px;
+	.name {
+		@extend .fo-e-lig;
+		font-size: 48pt;
+		color: #a83e4f;
+	}
+    .question {
+		@extend .fo-lig;
+		font-size: 24pt;
+		margin-top: 36px;
 	}
 }
