@@ -1,16 +1,21 @@
 @font-face {
-    font-family: Notosansdisplayregular;
-    src: url(/src/notosansdisplay/Notosansdisplayregular.ttf);
+    font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+    src: url(/src/fonts/NOTO_SANS_EXTLIGHT_REGULAR.ttf);
 }
 
 @font-face {
-    font-family: Notosansdisplaylight;
-    src: url(/src/notosansdisplay/Notosansdisplaylight.ttf);
+    font-family: NOTO_SANS_LIGHT_REGULAR;
+    src: url(/src/fonts/NOTO_SANS_LIGHT_REGULAR.ttf);
 }
 
 @font-face {
-    font-family: Notosansdisplaythin;
-    src: url(/src/notosansdisplay/Notosansdisplaythin.ttf);
+    font-family: NOTO_SANS_REGULAR;
+    src: url(/src/fonts/NOTO_SANS_REGULAR.ttf);
+}
+
+@font-face {
+    font-family: NOTO_SANS_SEMBD_REGULAR;
+    src: url(/src/fonts/NOTO_SANS_SEMBD_REGULAR.ttf);
 }
 
 body, html {
@@ -37,12 +42,12 @@ body, html {
 	}
 	.name {
 		color: #a83e4f;
-		font-family: Notosansdisplaythin;
+		font-family: NOTO_SANS_EXTLIGHT_REGULAR;
 		font-size: 48px;
 	}
 	.question {
 		color: #2e3237;
-		font-family: Notosansdisplaylight;
+		font-family: NOTO_SANS_LIGHT_REGULAR;
 		font-size: 24px;
 	}
 	.name, .question {
