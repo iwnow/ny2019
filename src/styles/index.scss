@@ -1,6 +1,32 @@
 @import '../../node_modules/normalize-scss/sass/normalize/import-now';
 @import 'font';
 
+@mixin star-animation($sec) {
+	-webkit-animation: star-anim #{$sec}s ease infinite;
+	-moz-animation: star-anim #{$sec}s ease infinite;
+	-ms-animation: star-anim #{$sec}s ease infinite;
+	-o-animation: star-anim #{$sec}s ease infinite;
+	animation: star-anim #{$sec}s infinite ease;
+	opacity: .5;
+}
+@mixin boken-animation($sec, $delay: 0) {
+	-webkit-animation: boken-anim #{$sec}s infinite reverse;
+	animation: star-anim #{$sec}s infinite reverse;
+	animation-delay: #{$delay}ms;
+	opacity: .2;
+}
+@keyframes star-anim {
+    0%   { opacity: .5; }
+	50% { opacity: 1; }
+	100% { opacity: .5; }
+}
+@keyframes boken-anim {
+    0%   { opacity: .5; }
+    50%   { opacity: .6; }
+	80% { opacity: .8; }
+	100% { opacity: .5; }
+}
+
 html, body {
 	height: 100vh;
 	width: 100vw;
@@ -17,7 +43,7 @@ html, body {
 		left: 0;
 		right: 0;
 		z-index: -1;
-		opacity: .5;
+		// opacity: .5;
 		background-image:
 			radial-gradient(
 				#f1f1f1,
@@ -74,11 +100,14 @@ html, body {
 }
 .halo-layer {
 	position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		overflow: hidden;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
 }
 .halo-left {
 	background-image: url(/src/styles/img/screen1/halo-left.png);
@@ -96,6 +125,178 @@ html, body {
 	bottom: 0;
     right: 0;
 }
+.boken1 {
+	background-image: url(/src/styles/img/screen1/boken1.png);
+	position: absolute;
+	width: 1056px;
+	height: 628px;
+	align-self: center;
+	justify-self: center;
+	margin-top: 40px;
+}
+.krugi1 {
+	background-image: url(/src/styles/img/screen1/krugi-1.png);
+	position: absolute;
+	width: 379px;
+	height: 305px;
+	right: 30px;
+}
+.krugi1234 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.krug1 {
+	background-image: url(/src/styles/img/screen1/krug-1.png);
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	bottom: 60px;
+    right: 120px;
+}
+.krug2 {
+	background-image: url(/src/styles/img/screen1/krug-2.png);
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	right: 10px;
+    bottom: 476px;
+}
+.krug3 {
+	background-image: url(/src/styles/img/screen1/krug-3.png);
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	right: 30px;
+    bottom: 500px;
+}
+.krug4 {
+	background-image: url(/src/styles/img/screen1/krug-4.png);
+	position: absolute;
+	width: 63px;
+	height: 63px;
+	background-repeat: no-repeat;
+	right: 280px;
+    top: 140px;
+}
+.krugi-starts1 {
+	background-image: url(/src/styles/img/screen1/krugi-stars1.png);
+	position: absolute;
+	width: 940px;
+	height: 556px;
+	background-repeat: no-repeat;
+	@include star-animation(2);
+}
+.star-1 {
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 240px;
+    right: 420px;
+}
+.star1-1 {
+	position: absolute;
+	background-image: url(/src/styles/img/screen1/star1-1.png);
+	width: 63px;
+	height: 63px;
+	background-repeat: no-repeat;
+	// top: 100px;
+	top: 16px;
+    // right: 200px;
+	right:0;
+	@include star-animation(2);
+}
+.star1-2 {
+	position: absolute;
+	background-image: url(/src/styles/img/screen1/star1-2.png);
+	width: 63px;
+	height: 63px;
+	background-repeat: no-repeat;
+	// top: 84px;
+	top: 0;
+    // right: 202px;
+	right: 2px;
+	@include star-animation(2);
+}
+@keyframes star-anim {
+    0%   { opacity: .3; }
+	50% { opacity: 1; }
+	100% { opacity: .3; }
+}
+.boken2 {
+	position: absolute;
+	background-image: url(/src/styles/img/screen1/boken2.png);
+	width: 1061px;
+	height: 556px;
+	background-repeat: no-repeat;
+	opacity: .6;
+}
+
+.boken2-1 {
+	transform: rotate(45deg);
+	    top: 300px;
+	left: -300px;
+	@include boken-animation(5, 1000);
+}
+.boken2-2 {
+	transform: rotate(90deg);
+	top: -500px;
+	 @include boken-animation(2, 500);
+}
+.boken2-3 {
+	transform: rotate(180deg);
+	right: -600px;
+	@include boken-animation(3, 1800);
+}
+.boken2-4 {
+	transform: rotate(135deg);
+	left: -400px;
+	@include boken-animation(6, 2200);
+}
+.boken2-5 {
+	display: none;
+	right: 400px;
+	bottom: 0;
+	@include boken-animation(6, 800);
+}
+.boken2-6 {
+	display: none;
+	@include boken-animation(4, 800);
+}
+
+@media screen and (max-width: 799px) {
+    .star-1 {
+		top: 140px;
+		right: 120px;	
+	}
+	.halo-left {
+		bottom: -140px;
+		left: -200px;
+	}
+	.halo-right {
+		bottom: 200px;
+		right: -500px;
+	}
+	.boken2 {
+		display: none;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.boken2-5, .boken2-6  {
+		display: block;
+	}
+	.confeti-4 {
+		left: 200px;
+	}
+	.confeti-5 {
+		right: 300px;
+	}
+}
 
 .first-screen {
 	height: 100%;
@@ -106,6 +307,7 @@ html, body {
 
 	.label-wrapper {
 		text-align: center;
+		z-index: 100;
 	}
 	.name {
 		@extend .fo-e-lig;
