@@ -1,6 +1,6 @@
 
 const data = {
-    userName: 'Виктор'
+    userName: 'userName'
 };
 
 export const api = {

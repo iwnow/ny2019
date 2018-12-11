@@ -31,7 +31,7 @@ html, body {
 	z-index: 0;
 }
 .confeti-1 {
-	background-image: url(/src/styles/img/confeti-1.png);
+	background-image: url(/src/styles/img/screen1/confeti-1.png);
 	bottom: 0;
 	left: 10px;
 	height: 40px;
@@ -42,35 +42,59 @@ html, body {
 	width: 97px;
 	bottom: 0;
     right: 0;
-	background-image: url(/src/styles/img/confeti-2.png);
+	background-image: url(/src/styles/img/screen1/confeti-2.png);
 }
 .confeti-3 {
 	height: 81px;
 	width: 63px;
-	background-image: url(/src/styles/img/confeti-3.png);
+	background-image: url(/src/styles/img/screen1/confeti-3.png);
 	left: 0;
     top: 100px;
 }
 .confeti-4 {
-	background-image: url(/src/styles/img/confeti-4.png);
+	background-image: url(/src/styles/img/screen1/confeti-4.png);
 	height: 52px;
 	width: 87px;
 	top: 0;
     left: 60px;
 }
 .confeti-5 {
-	background-image: url(/src/styles/img/confeti-5.png);
+	background-image: url(/src/styles/img/screen1/confeti-5.png);
 	height: 66px;
 	width: 61px;
 	top: 0;
     right: 80px;
 }
 .confeti-6 {
-	background-image: url(/src/styles/img/confeti-6.png);
+	background-image: url(/src/styles/img/screen1/confeti-6.png);
 	height: 70px;
 	width: 80px;
 	top: 120px;
     right: 20px;
+}
+.halo-layer {
+	position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+}
+.halo-left {
+	background-image: url(/src/styles/img/screen1/halo-left.png);
+	position: absolute;
+	width: 605px;
+	height: 556px;
+	bottom: 0;
+    left: 0;
+}
+.halo-right {
+	background-image: url(/src/styles/img/screen1/halo-right.png);
+	position: absolute;
+	width: 742px;
+	height: 556px;
+	bottom: 0;
+    right: 0;
 }
 
 .first-screen {
