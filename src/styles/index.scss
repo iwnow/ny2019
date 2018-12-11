@@ -55,6 +55,7 @@ html, body {
 .confeti {
 	position: absolute;
 	z-index: 0;
+	opacity: 0;
 }
 .confeti-1 {
 	background-image: url(/src/styles/img/screen1/confeti-1.png);
@@ -296,6 +297,9 @@ html, body {
 	.confeti-5 {
 		right: 300px;
 	}
+	.confeti-6 {
+		right: 120px;
+	}
 }
 
 .first-screen {
@@ -313,10 +317,50 @@ html, body {
 		@extend .fo-e-lig;
 		font-size: 48pt;
 		color: #a83e4f;
+		opacity: 0;
+		transform: translateY(50px)
 	}
     .question {
 		@extend .fo-lig;
 		font-size: 24pt;
 		margin-top: 36px;
+		opacity: 0;
+		transform: translateY(50px)
+	}
+}
+
+.loaded {
+	.confeti {
+		opacity: 1;
+		transition: opacity 1s linear;
+	}
+	.confeti-1 {
+		transition: opacity 1s linear 200ms;
+	}
+	.confeti-2 {
+		transition: opacity 1s linear 300ms;
+	}
+	.confeti-3 {
+		transition: opacity 1s linear 500ms;
+	}
+	.confeti-4 {
+		transition: opacity 1s linear 700ms;
+	}
+	.confeti-5 {
+		transition: opacity 1s linear 900ms;
+	}
+	.name {
+		opacity: 1;
+		transform: translateY(0);
+		transition:
+			opacity 1s linear,
+			transform .5s linear;
+	}
+    .question {
+		opacity: 1;
+		transform: translateY(0);
+		transition:
+			opacity 1s linear .5s,
+			transform .5s linear .5s;
 	}
 }
