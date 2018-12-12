@@ -53,6 +53,9 @@ html, body {
 	min-width: 100vw;
 	min-height: 100vh;
 	position: relative;
+	overflow: hidden;
+	font-size: 24pt;
+	@extend .fo-lig;
 
 	.bg {
 		position: absolute;
@@ -101,7 +104,7 @@ html, body {
 	height: 52px;
 	width: 87px;
 	top: 0;
-    left: 60px;
+    left: 240px;
 }
 .confeti-5 {
 	background-image: url(/src/styles/img/screen1/confeti-5.png);
@@ -304,39 +307,124 @@ html, body {
 	display: none;
 	@include boken-animation(4, 800);
 }
+@mixin img-stuff($url) {
+	position: absolute;
+	background-image: $url;
+	background-size: cover;
+}
+.photo {
+	@include img-stuff(url(/src/styles/img/screen2/photo.png));
+	width: 282px;
+	height: 231px;
+	top: 200px;
+	left: 200px;
+}
+.hue1 {
+	@include img-stuff(url(/src/styles/img/screen2/Hue_Saturation_1.png));
+	width: 369px;
+	height: 371px;
+	top: 40px;
+	left: 0;
+}
+.hue2 {
+	@include img-stuff(url(/src/styles/img/screen2/Hue_Saturation_2.png));
+	width: 230px;
+	height: 214px;
+	bottom: 0;
+	left: 0;
+}
+.hue3 {
+	@include img-stuff(url(/src/styles/img/screen2/Hue_Saturation3.png));
+	width: 148px;
+	height: 132px;
+	left: 100px;
+	bottom: 100px;
+}
+.caps1 {
+	@include img-stuff(url(/src/styles/img/screen2/IQOS_Caps_1.png));
+	width: 55px;
+	height: 77px;
+	left: 350px;
+	top: 500px;
+}
+.caps2 {
+	@include img-stuff(url(/src/styles/img/screen2/IQOS_Caps_2.png));
+	width: 57px;
+	height: 77px;
+	left: 250px;
+	top: 400px;
+}
+.iqos {
+	@include img-stuff(url(/src/styles/img/screen2/IQOS.png));
+	width: 174px;
+	height: 171px;
+	left: 0;
+	top: 400px;
+}
+.stik {
+	@include img-stuff(url(/src/styles/img/screen2/Stik.png));
+	width: 141px;
+	height: 147px;
+	top: 20px;
+	left: 300px;
+}
 
-@media screen and (max-width: 799px) {
-    .star-1 {
-		top: 140px;
-		right: 120px;	
-	}
-	.halo-left {
-		bottom: -140px;
-		left: -200px;
-	}
-	.halo-right {
-		bottom: 200px;
-		right: -500px;
-	}
-	.boken2 {
-		display: none;
+.hues {
+	opacity: 0;
+}
+body:not(.second) {
+	.hues {
+		left: -10000px !important;
 	}
 }
-@media screen and (min-width: 1200px) {
-	.boken2-5, .boken2-6  {
-		display: block;
+
+body.second {
+	.hues {
+		opacity: 1;
+		transition: opacity 1s linear;
 	}
-	.confeti-4 {
-		left: 200px;
+	.stik {
+		transition: opacity 1s linear 2300ms;
 	}
-	.confeti-5 {
-		right: 300px;
+	.iqos {
+		transition: opacity 1s linear 2000ms;
 	}
-	.confeti-6 {
-		right: 120px;
+	.photo {
+		transition: opacity 1s linear 1700ms;
+	} 
+	.caps1 {
+		transition: opacity 1s linear 1300ms;
+	}
+	.caps2 {
+		transition: opacity 1s linear 1000ms;
+	}
+	.hue1 {
+		transition: opacity 1s linear 700ms;
+	}
+	.hue2 {
+		transition: opacity 1s linear 400ms;
+	}
+	.hue3 {
+		transition: opacity 1s linear 100ms;
+	}
+	.label-wrapper-2 {
+		.ny {
+			opacity: 1;
+			transform: translateY(0);
+			transition:
+				opacity 1s linear,
+				transform .5s linear;
+		}
+
+		.wantsay, .thank, .last {
+			opacity: 1;
+			transform: translateY(0);
+			transition:
+				opacity 1s linear .5s,
+				transform .5s linear .5s;
+		}
 	}
 }
-
 .first-screen {
 	height: 100%;
 	width: 100%;
@@ -344,7 +432,7 @@ html, body {
 	align-items: center;
 	justify-content: center;
 
-	.label-wrapper {
+	.label-wrapper-1 {
 		text-align: center;
 		z-index: 100;
 	}
@@ -397,5 +485,127 @@ html, body {
 		transition:
 			opacity 1s linear .5s,
 			transform .5s linear .5s;
+	}
+}
+
+@media screen and (max-width: 480px) {
+    .star-1 {
+		top: 140px;
+		right: 120px;	
+	}
+	.halo-left {
+		bottom: -50px;
+		left: -74px;	
+	}
+	.halo-right {
+		bottom: 200px;
+		right: -500px;
+	}
+	.boken2 {
+		display: none;
+	}
+	.hues, .confeti {
+		transform: scale(.5)
+	}
+	.hue1 {
+		top: -110px;
+		left: -120px;
+	}
+	.confeti-4 {
+		top: 0px;
+		left: 79px;
+	}
+	.confeti-5 {
+		top: -18px;
+		right: 34px;
+	}
+	.confeti-6 {
+		right: -10px;
+	}
+	.confeti-1 {
+		bottom: -10px;
+	}
+	.confeti-2 {
+		bottom: -20px;
+	}
+	.photo {
+		top: 24px;
+		left: 0;
+	}
+	.caps1 {
+		top: 158px;
+		left: 74px;
+	}
+	.caps2 {
+		top: 76px;
+    left: 200px;
+	}
+	.stik {
+		top: -3px;
+    left: 105px;
+	}
+	.iqos {
+		top: 120px;
+    left: -70px;
+	}
+	.hue2 {
+		left: -78px;
+		bottom: -58px;	
+	}
+	.hue3 {
+		bottom: 0;
+		left: 32px;
+	}
+}
+@media screen and (min-width: 1200px) {
+	.boken2-5, .boken2-6  {
+		display: block;
+	}
+	.confeti-5 {
+		right: 300px;
+	}
+	.confeti-6 {
+		right: 120px;
+	}
+	.confeti-1 {
+		left: 100px;
+	}
+	.confeti-2 {
+		right: 50px;
+	}
+}
+.label-wrapper-2 {
+	opacity: .8;
+	position: absolute;
+	z-index: 1;
+	margin-top: 32px;
+	padding: 0 20px 0 40px;
+	font-size: .5rem;
+
+	.thank {
+		color: #a83e4f;
+		font-weight: 800;
+		margin-top: 4px;
+		opacity: 0;
+		transform: translateY(50px)
+	}
+
+	.ny {
+		color: #a83e4f;
+		font-size: .8rem;
+		opacity: 0;
+		transform: translateY(50px)
+	}
+
+	.wantsay {
+		line-height: 1.2em;
+		margin-top: 20px;
+		opacity: 0;
+		transform: translateY(50px)
+	}
+	.last {
+		margin-top: 6px;
+		opacity: 0;
+		transform: translateY(50px)
 	}
 }
