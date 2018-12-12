@@ -1,24 +1,42 @@
 @import '../../node_modules/normalize-scss/sass/normalize/import-now';
 @import 'font';
 
-@mixin star-animation($sec) {
+@mixin star-animation($sec, $delay: 0) {
 	-webkit-animation: star-anim #{$sec}s ease infinite;
 	-moz-animation: star-anim #{$sec}s ease infinite;
 	-ms-animation: star-anim #{$sec}s ease infinite;
 	-o-animation: star-anim #{$sec}s ease infinite;
 	animation: star-anim #{$sec}s infinite ease;
-	opacity: .5;
+	animation-delay: #{$delay}ms;
+	opacity: 1;
 }
 @mixin boken-animation($sec, $delay: 0) {
 	-webkit-animation: boken-anim #{$sec}s infinite reverse;
-	animation: star-anim #{$sec}s infinite reverse;
+	animation: boken-anim #{$sec}s infinite reverse;
 	animation-delay: #{$delay}ms;
 	opacity: .2;
 }
+@mixin bg-animation($sec, $delay: 0) {
+	-webkit-animation: bg-anim #{$sec}s infinite reverse;
+	animation: bg-anim #{$sec}s infinite reverse;
+	animation-delay: #{$delay}ms;
+}
+@mixin full() {
+	position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+}
+@keyframes bg-anim {
+    0%   { opacity: .1; }
+	50% { opacity: .3; }
+	100% { opacity: .1; }
+}
 @keyframes star-anim {
-    0%   { opacity: .5; }
+    0%   { opacity: .2; }
 	50% { opacity: 1; }
-	100% { opacity: .5; }
+	100% { opacity: .2; }
 }
 @keyframes boken-anim {
     0%   { opacity: .5; }
@@ -135,6 +153,23 @@ html, body {
 	justify-self: center;
 	margin-top: 40px;
 }
+.bg2 {
+	background: url(/src/styles/img/screen1/bg2.png) no-repeat center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	// width: 1495px;
+	// height: 539px;
+	z-index: -1;
+	opacity: .1;
+	@include bg-animation(5, 500);
+
+	div {
+		@include full();
+	}
+}
 .krugi1 {
 	background-image: url(/src/styles/img/screen1/krugi-1.png);
 	position: absolute;
@@ -210,7 +245,7 @@ html, body {
 	top: 16px;
     // right: 200px;
 	right:0;
-	@include star-animation(2);
+	@include star-animation(3, 1000);
 }
 .star1-2 {
 	position: absolute;
