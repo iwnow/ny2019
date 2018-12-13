@@ -487,8 +487,43 @@ body.second {
 			transform .5s linear .5s;
 	}
 }
+.label-wrapper-2 {
+	opacity: .8;
+	position: absolute;
+	z-index: 1;
+	margin-top: 32px;
+	padding: 0 20px 0 40px;
+	font-size: .5rem;
 
-@media screen and (max-width: 480px) {
+	.thank {
+		color: #a83e4f;
+		font-weight: 800;
+		margin-top: 4px;
+		opacity: 0;
+		transform: translateY(50px)
+	}
+
+	.ny {
+		color: #a83e4f;
+		font-size: .8rem;
+		opacity: 0;
+		transform: translateY(50px)
+	}
+
+	.wantsay {
+		line-height: 1.2em;
+		margin-top: 20px;
+		opacity: 0;
+		transform: translateY(50px)
+	}
+	.last {
+		margin-top: 6px;
+		opacity: 0;
+		transform: translateY(50px)
+	}
+}
+
+@media screen and (max-width: 599px) {
     .star-1 {
 		top: 140px;
 		right: 120px;	
@@ -557,7 +592,7 @@ body.second {
 		left: 32px;
 	}
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 600px) {
 	.boken2-5, .boken2-6  {
 		display: block;
 	}
@@ -568,44 +603,74 @@ body.second {
 		right: 120px;
 	}
 	.confeti-1 {
-		left: 100px;
+		left: 200px;
 	}
 	.confeti-2 {
 		right: 50px;
 	}
-}
-.label-wrapper-2 {
-	opacity: .8;
-	position: absolute;
-	z-index: 1;
-	margin-top: 32px;
-	padding: 0 20px 0 40px;
-	font-size: .5rem;
 
-	.thank {
-		color: #a83e4f;
-		font-weight: 800;
-		margin-top: 4px;
-		opacity: 0;
-		transform: translateY(50px)
-	}
+	.label-wrapper-2 {
+		margin-top: 0;
+		font-size: 1em;
+		margin-left: 100px;
 
-	.ny {
-		color: #a83e4f;
-		font-size: .8rem;
-		opacity: 0;
-		transform: translateY(50px)
+		.ny {
+			font-size: 2rem;
+		}
+		.thank, .last {
+			margin-top: 20px;
+		}
+		.wantsay {
+			margin-top: 40px;
+		}
 	}
-
-	.wantsay {
-		line-height: 1.2em;
-		margin-top: 20px;
-		opacity: 0;
-		transform: translateY(50px)
+	.hue1 {
+		top: -62px;
+    left: -110px;
 	}
-	.last {
-		margin-top: 6px;
-		opacity: 0;
-		transform: translateY(50px)
+	.confeti-4 {
+		top: 0px;
+		left: 146px;
+	}
+	.confeti-5 {
+		top: -18px;
+		right: 34px;
+	}
+	.confeti-6 {
+		right: -10px;
+	}
+	.confeti-1 {
+		bottom: -10px;
+	}
+	.confeti-2 {
+		bottom: -20px;
+	}
+	.photo {
+		top: 134px;
+		left: 94px;	
+	}
+	.caps1 {
+		top: 324px;
+		left: 132px;
+	}
+	.caps2 {
+		top: 362px;
+		left: 186px;	
+	}
+	.stik {
+		top: 42px;
+		left: 226px;
+	}
+	.iqos {
+		top: 304px;
+		left: -50px;
+	}
+	.hue2 {
+		left: -35px;
+		bottom: -10px;		
+	}
+	.hue3 {
+		bottom: 72px;
+		left: 160px;
 	}
 }
