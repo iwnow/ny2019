@@ -900,6 +900,24 @@ body.second {
 		top: 0;
 		right: 5%;
 	}
+	.label-wrapper-3 {
+		position: absolute;
+		z-index: 4;
+		margin-top: 0;
+		padding: 0 20px 0 40px;
+		color: white;
+		opacity: 0 !important;
+		text-align: center;
+		font-size: .65rem;
+		&>div {
+			margin-top: 12px;
+		}
+		&>div:last-child {
+			margin-top: 20px;
+			font-size: .52rem;
+			line-height: .8rem;
+		}
+	}
 }
 
 @media screen and (max-width: 599px) {
