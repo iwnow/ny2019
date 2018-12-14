@@ -575,6 +575,25 @@ body.second {
 	position: absolute;
 }
 
+.sc3 { opacity: 0; }
+.third {
+	.sc3 { 
+		opacity: 1; 
+		transition: opacity 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+	}
+}
+.branch2 {
+	// background: url(/src/styles/img/screen3/branch2.png) no-repeat center center fixed; 
+	background: url(/src/styles/img/screen3/branch2.png) no-repeat;
+	background-size: cover;
+  background-position: center;
+	width: 100vw;
+	height: 242px;
+	position: absolute;
+	z-index: 3;
+	top: 0;
+}
+
 @media screen and (max-width: 599px) {
     .star-1 {
 		top: 140px;
