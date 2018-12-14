@@ -6,22 +6,22 @@ import {api} from './api';
     api.getUser().then(start).catch(console.error);
 
     function start({ userName }) {
-        scene2to3();
-        $(document.body).addClass('third');
-        // $('#userName').text((userName || '').toUpperCase());
-        // $(document.body).addClass('loaded');
         // scene2to3();
-        // setTimeout(() => {
-        //     $('.label-wrapper-1').animate({
-        //         opacity: 0,
-        //       }, 500, function() {
-        //         $('.label-wrapper-1').css('display', 'none');
-        //         $(document.body).addClass('second');
-        //         setTimeout(() => {
-        //             $(document.body).addClass('third');
-        //         }, 6000);
-        //       });
-        // }, 2000);
+        // $(document.body).addClass('third');
+        $('#userName').text((userName || '').toUpperCase());
+        $(document.body).addClass('loaded');
+        scene2to3();
+        setTimeout(() => {
+            $('.label-wrapper-1').animate({
+                opacity: 0,
+              }, 500, function() {
+                $('.label-wrapper-1').css('display', 'none');
+                $(document.body).addClass('second');
+                setTimeout(() => {
+                    $(document.body).addClass('third');
+                }, 3000);
+              });
+        }, 2000);
     }
 
     function scene2to3() {
