@@ -556,7 +556,7 @@ body.second {
 		transform: skew(-40deg) translate(398px, 0);
 		transition: transform .6s linear;
 	}
-	.bg33 {
+	.bg33,.sc3-boken-light {
 		opacity: 1;
 		transition: opacity 1s cubic-bezier(0.95, 0.05, 0.795, 0.035);;
 	}
@@ -565,6 +565,14 @@ body.second {
 	@include img-center-cover(url(/src/styles/img/screen3/bg-scene.png));
 	opacity: 0;
 	z-index: 3;
+}
+.sc3-boken-light {
+	@include img-center-cover(url(/src/styles/img/screen3/boken-light.png));
+	opacity: 0;
+	z-index: 3;
+	width: 1024px;
+	height: 556px;
+	position: absolute;
 }
 
 @media screen and (max-width: 599px) {
