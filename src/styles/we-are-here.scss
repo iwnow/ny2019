@@ -1,0 +1,74 @@
+.we-are-here {
+  ////HIDE
+  display: none;
+
+
+
+  position: relative;
+  background: #201f2f;
+  background: radial-gradient(#454658, #0f0e1c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(./../img/we-are-here/photo.png);
+  font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+  color: #d9d9d9;
+  width: 100%;
+  height: 100%;
+  .we-are-here-wrapper {
+    z-index: 5;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    height: 274px;
+    width: 800px;
+  }
+  h1, h2 {
+    font-weight: 100;
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h2 {
+    color: #e9e9e9;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  h3 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: 100;
+  }
+  h1, h2, h3 {
+    z-index: 5;
+  }
+  .blik1, .blik2, .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+  }
+  .blik2 {
+    opacity: 0.2;
+    background-size: contain;
+    z-index: 3;
+    background-image: url(./../img/we-are-here/blik2.png);
+  }
+  .blik1 {
+    opacity: 0.5;
+    background-size: auto;
+    z-index: 4;
+    background-image: url(./../img/we-are-here/blik1.png);
+  }
+  .stars {
+    background-size: contain;
+    opacity: 0.45;
+    z-index: 5;
+    background-image: url(./../img/we-are-here/stars.png);
+  }
+}

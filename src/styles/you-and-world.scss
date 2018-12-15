@@ -1,0 +1,135 @@
+.you-and-world {
+  position: relative;
+  background: #f1f1f1;
+  background: radial-gradient(#f8f8f8, #d0d0d0);
+  color: #5f5f5f;
+  width: 100%;
+  height: 100%;
+  .decoration-img {
+    position: absolute;
+  }
+  .photo-people {
+    top: 20px;
+  }
+  .ball {
+    top: 30px;
+    left: 10%;
+  }
+  .elka-top {
+    right: 10%;
+  }
+  .tapes {
+    right: 9%;
+  }
+  .photo-cofee {
+    right: 0;
+    top: 30px;
+  }
+  .iqos {
+    bottom: 0;
+    right: 14%;
+  }
+  .box {
+    right: 5%;
+    bottom: 10%;
+  }
+  .tape-yellow-right {
+    right: 2%;
+    bottom: 0;
+  }
+  .lollipop {
+    bottom: 20px;
+    right: 28%;
+  }
+  .spring {
+    bottom: 0;
+    left: 10%
+  }
+  .tape-yellow-left {
+    left: 5%;
+    bottom: 0;
+  }
+  .phone {
+    width: 219px;
+    height: 327px;
+    top: 27%;
+    left: 2%;
+    overflow: hidden;
+    transform: rotate(-15deg);
+    .phone__body {
+      position: absolute;
+      z-index: 1;
+    }
+    .phone__screen {
+      top: 39px;
+      left: 15px;
+      position: absolute;
+    }
+    .phone__screen_one {
+      z-index: 4;
+    }
+    .phone__screen_two {
+      z-index: 3;
+    }
+    .phone__screen_three {
+      z-index: 2;
+    }
+  }
+  .cherry {
+    bottom: 15%;
+    left: 0;
+  }
+  .ribbon {
+    top: 18%;
+    left: 10%;
+  }
+  .you-and-world-wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    height: 274px;
+    width: 800px;
+    z-index: 1;
+  }
+  h1, h2 {
+    font-weight: 100;
+    margin: 0;
+    font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  h2 {
+    color: #454545;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .animate-phone {
+    .phone__screen_one {
+      animation: next-screen 1s ease-out forwards;
+    }
+  }
+  .animate-phone-two {
+    .phone__screen_two {
+      animation: next-screen 1s ease-out forwards;
+    }
+  }
+}
+
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes next-screen {
+  from {}
+  to {
+    left: -132px;
+  }
+}
+
+@keyframes next-screen {
+  from {}
+  to {
+    left: -132px;
+  }
+}

@@ -1,3 +1,8 @@
+@import "our-program";
+@import "you-and-world";
+@import "we-are-here";
+@import "mails-in-2018";
+
 @font-face {
     font-family: NOTO_SANS_EXTLIGHT_REGULAR;
     src: url(/src/fonts/NOTO_SANS_EXTLIGHT_REGULAR.ttf);
@@ -23,43 +28,4 @@ body, html {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-}
-
-.first-screen {
-  	position: relative;
-	width: 100%;
-	height: 100%;
-	background: #d7d7d7; /* Old browsers */
-	background: -moz-linear-gradient(45deg, #d7d7d7 0%, #d5d5d5 100%);
-	background: -webkit-linear-gradient(45deg, #d7d7d7 0%,#d5d5d5 100%);
-	background: linear-gradient(45deg, #d7d7d7 0%,#d5d5d5 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7d7d7', endColorstr='#d5d5d5',GradientType=1 );
-	h1, h2 {
-		margin: 0;
-	}
-	h1 {
-		margin-bottom: 34px;
-	}
-	.name {
-		color: #a83e4f;
-		font-family: NOTO_SANS_EXTLIGHT_REGULAR;
-		font-size: 48px;
-	}
-	.question {
-		color: #2e3237;
-		font-family: NOTO_SANS_LIGHT_REGULAR;
-		font-size: 24px;
-	}
-	.name, .question {
-		text-align: center;
-	}
-	.label-wrapper {
-		letter-spacing: 10px;
-		position: relative;
-  		top: 50%;
-  		width: 301px;
-  		height: 91px;
-  		margin: 0 auto;
-  		margin-top: -45.5px;
-	}
 }
