@@ -1,15 +1,14 @@
 .mails-in-2018 {
-  ////HIDE
-  display: none;
-
-
-  position: relative;
+  position: absolute;
+  bottom: 0;
   background: #262534;
   background: radial-gradient(#515365, #0f0e1d);
   color: #d9d9d9;
   width: 100%;
   height: 100%;
+  z-index: 100;
   .mails-in-2018-wrapper {
+    position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -40,5 +39,47 @@
     color: #e9e9e9;
     font-size: 18px;
     line-height: 30px;
+  }
+  .column__phone {
+    position: relative;
+    align-self: flex-end;
+    margin-bottom: -6px;
+    z-index: 120;
+    .phone__screen {
+      position: absolute;
+      width: 341px;
+      left: 31px;
+      top: 128px;
+      height: 100%;
+      background-image: url(./../img/mails-in-2018/phone-screen.png);
+      transition: background-position 0.8s ease-out 2s;
+      background-size: 569px;
+      background-position: center 182px;
+    }
+  }
+  .decoration-icons {
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 3s, opacity 0.3s ease 3s;
+    display: block;
+    position: absolute;
+    opacity: 0;
+    transform: scale(1);
+    z-index: 101;
+    top: 140px;
+    left: -42px;
+  }
+  .column__phone.next-position {
+    .phone__screen {
+      background-position: center bottom;
+    }
+  }
+}
+
+.seven {
+  .mails-in-2018 {
+    .decoration-icons {
+      transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 3s, opacity 0.3s ease 3s;
+      opacity: 1;
+      transform: scale(1.8);
+    }
   }
 }

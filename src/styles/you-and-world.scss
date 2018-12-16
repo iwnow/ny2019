@@ -1,3 +1,15 @@
+.five {
+  .you-and-world {
+    top: 0;
+    position: absolute;
+    opacity: 0;
+    z-index: 15;
+    transition: z-index 1s ease 2s ;
+  }
+  .sc3 {
+    z-index: 51;
+  }
+}
 .you-and-world {
   position: relative;
   background: #f1f1f1;
@@ -117,7 +129,16 @@
     }
   }
 }
-
+.five {
+  .bg5.even {
+    transform: skew(-40deg) translate(398px, 0);
+    transition: transform .6s linear .3s;
+  }
+  .bg5.odd {
+    transform: skew(-40deg) translate(398px, 0);
+    transition: transform .6s linear;
+  }
+}
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes next-screen {

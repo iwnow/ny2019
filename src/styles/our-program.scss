@@ -1,9 +1,4 @@
 .our-program {
-  ////HIDE
-  display: none;
-
-
-
   font-family: NOTO_SANS_EXTLIGHT_REGULAR;
   position: relative;
   background-image: url(./../img/our-program/our-program-bg.gif);
@@ -11,17 +6,18 @@
   color: #e3e3e3;
   width: 100%;
   height: 100%;
-  &:after {
-    content: '';
+  .our-program-tape {
     display: block;
+    opacity: 0.5;
     background-image: url(./../img/our-program/CLUB.png);
     background-position: center;
-    background-size: 1024px 556px;
+    //background-size: 1024px 556px;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     top: 0;
-    z-index: 0;
+    z-index: 3;
     position: absolute;
   }
   .our-program-wrapper {
@@ -45,6 +41,9 @@
   h3 {
     position: relative;
     z-index: 10;
+  }
+  .our-program_one, .our-program_two, .our-program_three {
+    z-index: 4;
   }
   .our-program_two {
     h1 {

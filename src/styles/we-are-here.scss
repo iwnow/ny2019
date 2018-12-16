@@ -1,27 +1,36 @@
+.six {
+  .we-are-here {
+    top: 0;
+    position: absolute;
+    z-index: 50;
+  }
+  //.sc3 {
+  //  z-index: 51;
+  //}
+}
+
 .we-are-here {
-  ////HIDE
-  display: none;
-
-
-
   position: relative;
+  opacity: 0;
   background: #201f2f;
   background: radial-gradient(#454658, #0f0e1c);
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(./../img/we-are-here/photo.png);
+  background-image: url(./../img/we-are-here/we-are-here-bg-0.png);
   font-family: NOTO_SANS_EXTLIGHT_REGULAR;
   color: #d9d9d9;
   width: 100%;
   height: 100%;
   .we-are-here-wrapper {
-    z-index: 5;
-    position: relative;
+    position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    //transform: translateX(-50%);
     margin: 0 auto;
     height: 274px;
     width: 800px;
+    z-index: 52;
   }
   h1, h2 {
     font-weight: 100;
@@ -70,5 +79,54 @@
     opacity: 0.45;
     z-index: 5;
     background-image: url(./../img/we-are-here/stars.png);
+  }
+  .photo-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 51;
+  }
+  .photo-bg-1 {
+    background-image: url(./../img/we-are-here/we-are-here-bg-1.png);
+    z-index: 49;
+  }
+  .photo-bg-2 {
+    background-image: url(./../img/we-are-here/we-are-here-bg-2.png);
+    z-index: 48;
+  }
+  .photo-bg-3 {
+    background-image: url(./../img/we-are-here/we-are-here-bg-3.png);
+    z-index: 47;
+  }
+}
+
+.bg6 {
+  position: absolute;
+  z-index: 50;
+  height: 100%;
+  background-color: #201f2f;
+}
+.bg6 {
+  background: #201f2f;
+}
+.bg6.even {
+  transform: skew(-40deg) translate(398px, -1000px);
+}
+.bg6.odd {
+  transform: skew(-40deg) translate(398px, -1000px);
+}
+
+.six {
+  .bg6.even {
+    transform: skew(-40deg) translate(398px, 0);
+    transition: transform .6s linear .3s;
+  }
+  .bg6.odd {
+    transform: skew(-40deg) translate(398px, 0);
+    transition: transform .6s linear;
   }
 }
