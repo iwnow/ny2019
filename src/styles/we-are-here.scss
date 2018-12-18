@@ -31,6 +31,10 @@
     height: 274px;
     width: 800px;
     z-index: 52;
+    @media screen and (max-width: 599px) {
+      height: auto;
+      width: auto;
+    }
   }
   h1, h2 {
     font-weight: 100;
@@ -38,6 +42,9 @@
     font-size: 36px;
     text-align: center;
     margin-bottom: 30px;
+    @media screen and (max-width: 599px) {
+      font-size: 28px;
+    }
   }
   h2 {
     color: #e9e9e9;
@@ -89,6 +96,9 @@
     width: 100%;
     height: 100%;
     z-index: 51;
+    @media screen and (max-width: 599px) {
+      background-position: center;
+    }
   }
   .photo-bg-1 {
     background-image: url(./../img/we-are-here/we-are-here-bg-1.png);

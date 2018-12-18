@@ -36,14 +36,23 @@
   .photo-cofee {
     right: 0;
     top: 30px;
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
   }
-  .iqos {
+  .iqos-device {
     bottom: 0;
     right: 14%;
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
   }
   .box {
     right: 5%;
     bottom: 10%;
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
   }
   .tape-yellow-right {
     right: 2%;
@@ -55,11 +64,17 @@
   }
   .spring {
     bottom: 0;
-    left: 10%
+    left: 10%;
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
   }
   .tape-yellow-left {
     left: 5%;
     bottom: 0;
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
   }
   .phone {
     width: 219px;
@@ -86,10 +101,16 @@
     .phone__screen_three {
       z-index: 2;
     }
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
   }
   .cherry {
     bottom: 15%;
     left: 0;
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
   }
   .ribbon {
     top: 18%;
@@ -103,6 +124,9 @@
     height: 274px;
     width: 800px;
     z-index: 1;
+    @media screen and (max-width: 599px) {
+      width: auto;
+    }
   }
   h1, h2 {
     font-weight: 100;

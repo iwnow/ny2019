@@ -28,6 +28,9 @@
     height: 271px;
     width: 620px;
     z-index: 1;
+    @media screen and (max-width: 599px) {
+      width: auto;
+    }
   }
   h1, h2 {
     position: relative;
@@ -37,6 +40,9 @@
     font-size: 48px;
     text-align: center;
     width: 600px;
+    @media screen and (max-width: 599px) {
+      width: auto;
+    }
   }
   h3 {
     position: relative;

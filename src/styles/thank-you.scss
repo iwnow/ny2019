@@ -1,0 +1,77 @@
+.thank-you {
+  //width: 100%;
+  //height: 100%;
+  position: absolute;
+  z-index: 200;
+  font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+  //position: relative;
+  top: 0;
+  background-image: url(./../img/thank-you/bg2.png);
+  background-size: cover;
+  color: #e3e3e3;
+  width: 100%;
+  height: 100%;
+  .thank-you-wrapper {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    height: 271px;
+    width: 620px;
+    z-index: 1;
+    h1, h2 {
+      font-weight: 100;
+    }
+    h1 {
+      font-size: 20px;
+      line-height: 1.4;
+      margin: 15px 0 50px 10px;
+    }
+    h2 {
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    @media screen and (max-width: 599px) {
+      width: auto;
+    }
+  }
+  .thank-you-label {
+    @media screen and (max-width: 599px) {
+      width: 370px;
+    }
+  }
+  .iqos-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}
+
+.bg7 {
+  position: absolute;
+  z-index: 199;
+  height: 100%;
+  background-color: #201f2f;
+}
+.bg7 {
+  background: #3c0919;
+}
+.bg7.even {
+  transform: skew(-40deg) translate(398px, -1000px);
+}
+.bg7.odd {
+  transform: skew(-40deg) translate(398px, -1000px);
+}
+
+.eight {
+  .bg7.even {
+    transform: skew(-40deg) translate(398px, 0);
+    transition: transform .6s linear .3s;
+  }
+  .bg7.odd {
+    transform: skew(-40deg) translate(398px, 0);
+    transition: transform .6s linear;
+  }
+}

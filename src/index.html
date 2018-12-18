@@ -6,19 +6,17 @@
   <title>IQOS</title>
 </head>
 <body>
+  <audio id="iqos-audio" src="src/music/iqos.mp3" autoplay>Ваш браузер не поддерживает <code>audio</code> элемент.</audio>
+  <!--<embed src="src/music/iqos.mp3" autostart="true" hidden="true" loop="true" width="300" height="65" align="bottom"> </embed>-->
   <div class="first-screen">
     <div class="bg"></div>
     <div class="bg2">
       <div></div>
     </div>
-    <!--<div class="bg-you-and-world"></div>-->
     <div class="halo-layer">
       <div class="halo-left"></div>
       <div class="halo-right"></div>
       <div class="boken1"></div>
-      <!-- <div class="bg2">
-        <div></div>
-      </div> -->
       <div class="boken2 boken2-1"></div>
       <div class="boken2 boken2-2"></div>
       <div class="boken2 boken2-3"></div>
@@ -40,7 +38,6 @@
     </div>
     <div class="confeti confeti-1"></div>
     <div class="confeti confeti-2"></div>
-    <!-- <div class="confeti confeti-3"></div> -->
     <div class="confeti confeti-4"></div>
     <div class="confeti confeti-5"></div>
     <div class="confeti confeti-6"></div>
@@ -61,22 +58,20 @@
       <div class="ny">уже совсем близко</div>
       <div class="wantsay">и мы хотим Вам сказать:</div>
       <div class="thank">спасибо, что Вы были с нами в этом году!</div>
-      <div class="last">85 дней назад Вы сделали шаг навстречу</div>
+      <div class="last"><span id="days-gone"></span> дней назад Вы сделали шаг навстречу</div>
       <div class="last">изменениям к лучшему вместе с IQOS!</div>
     </div>
     <div class="bg3 bg33"></div>
     <div class="sc3-boken-light"></div>
     <div class="sc3 label-wrapper-3">
-      <div>Вы обладаете </div>
-      <div>невероятным стремлением</div>
-      <div>делать все вокруг Вас красивее и удобнее,</div>
-      <div class="last">именно поэтому для своего IQOS Вы тщательно подбираете аксесуары</div>
+      <div class="scene4-text">Вы обладаете </div>
+      <div class="scene4-text">невероятным стремлением</div>
+      <div class="scene4-text">делать все вокруг Вас красивее и удобнее,</div>
+      <div class="last scene4-text">именно поэтому для своего IQOS Вы тщательно подбираете аксесуары</div>
+      <div class="scene4-alter-text">В Новом году Вы всегда можете придать <br>Вашему устройству индивидуальность <br>и сделать его ярким, элегантным,</div>
+      <div class="last scene4-alter-text">подобрав стильные и удобные аксессуары.</div>
     </div>
-    <!-- <div class="sc3 layer532"></div>
-    <div class="sc3 sc3-shadow"></div>
-    -->
     <div class="sc3 branch2"></div>
-    <!-- <div class="sc3 sc3-full"></div> -->
     <div class="sc3 boken-star"></div>
     <div class="sc3 sc3-star1"></div>
     <div class="sc3 sc3-star2"></div>
@@ -98,8 +93,6 @@
 
 
     <section class="our-program">
-      <!--<div class="effect light"></div>-->
-      <!--<div class="effect stars"></div>-->
       <div class="our-program-wrapper our-program_one">
         <h1>В этом году мы запустили программу лояльности</h1>
         <h2>IQOS CLUB</h2>
@@ -107,12 +100,25 @@
       <div class="our-program-wrapper our-program_two">
         <h1>чтобы Вы могли получать<br>дополнительные преимущества, чтобы <br> мы могли чаще встречаться, чтобы все<br> клиенты IQOS были вместе</h1>
       </div>
-      <div class="our-program-wrapper our-program_three">
+      <div class="our-program-wrapper our-program_three our-program-wrapper-silver">
         <h2>Ваш уровень</h2>
         <h1>SILVER</h1>
         <h3>и это отличное начало!<br>
           Больше переключений, больше активностей вместе<br>
           с IQOS – и в следующем году Вы на новом уровне!</h3>
+      </div>
+      <div class="our-program-wrapper our-program_three our-program-wrapper-gold">
+        <h2>Ваш уровень</h2>
+        <h1>GOLD</h1>
+        <h3>Вы настоящий поклонник IQOS, а это значит,<br>
+          что в 2019 году вы выйдете на новый уровень!</h3>
+      </div>
+      <div class="our-program-wrapper our-program_three our-program-wrapper-platinum">
+        <h2>Ваш уровень</h2>
+        <h1>PLATINUM</h1>
+        <h3>Вы прошли самый большой путь с IQOS!<br>
+          В 2019 году мы будем стремиться делать<br>
+          еще больше эксклюзивных предложений для Вас!</h3>
       </div>
       <div class="our-program-tape"></div>
     </section>
@@ -125,7 +131,7 @@
     <img class="decoration-img tapes" src="src/img/you-and-world/tapes.png" alt="">
     <img class="decoration-img photo-cofee" src="src/img/you-and-world/photo-cofee.png" alt="">
     <img class="decoration-img box" src="src/img/you-and-world/ny-box.png" alt="">
-    <img class="decoration-img iqos" src="src/img/you-and-world/iqos.png" alt="">
+    <img class="decoration-img iqos-device" src="src/img/you-and-world/iqos.png" alt="">
     <img class="decoration-img tape-yellow-right" src="src/img/you-and-world/tape-yellow-right.png" alt="">
     <img class="decoration-img lollipop" src="src/img/you-and-world/lollipop.png" alt="">
     <img class="decoration-img spring" src="src/img/you-and-world/sprig.png" alt="">
@@ -140,23 +146,26 @@
     <img class="decoration-img ribbon" src="src/img/you-and-world/ribbon.png" alt="">
     <div class="you-and-world-wrapper">
       <h1>Но главное, благодаря Вам,<br>мир вокруг тоже меняется к лучшему</h1>
-      <h2>
-        Вы открываете для своих друзей и близких* <br>мир без дыма и пепла, Вы помогаете им сделать шаг<br> навстречу изменениям.<br>В это году Вы переключили на IQOS ХХ друзей.
+      <h2 class="you-and-world-main-text">
+        Вы открываете для своих друзей и близких* <br>мир без дыма и пепла, Вы помогаете им сделать шаг<br> навстречу изменениям.<br>В это году Вы переключили на IQOS <span id="vouchers">ХХ</span> друзей.
+      </h2>
+      <h2 class="you-and-world-alter-text">
+        Вы можете открыть для своих друзей и близких* мир без дыма и пепла.<br> А Вы - получить еще больше преимуществ от IQOS CLUB.
       </h2>
     </div>
   </section>
 
   <section class="we-are-here">
-    <!--<div class="stars"></div>-->
-    <!--<div class="blik1"></div>-->
-    <!--<div class="blik2"></div>-->
     <div class="photo-bg photo-bg-1"></div>
     <div class="photo-bg photo-bg-2"></div>
     <div class="photo-bg photo-bg-3"></div>
     <div class="we-are-here-wrapper">
       <h1>Помните, что мы всегда рядом<br>чтобы помочь.</h1>
-      <h2>
-        В этом году мы с Вами разговаривали ХХ раз,<br>и мы очень надеемся, что помогли решить Ваши вопросы.г<br>Пусть в 2019 году у нас остаются только приятные поводы для общения!
+      <h2 class="we-are-here-text">
+        В этом году мы с Вами разговаривали <span id="call_center">ХХ</span> раз,<br>и мы очень надеемся, что помогли решить Ваши вопросы.<br>Пусть в 2019 году у нас остаются только приятные поводы для общения!
+      </h2>
+      <h2 class="we-are-here-alter-text">
+        Если вдруг у Вас появятся вопросы, то Вы всегда можете обратиться к нам по телефону Клиентской службы.<br>Пусть в 2019 году у нас будут только приятные поводы для общения!
       </h2>
     </div>
     <h3>*друзья, близкие – совершеннолетние курильщики</h3>
@@ -170,12 +179,32 @@
         <div class="phone__screen"></div>
       </div>
       <div class="column column__label">
-        <h1>В 2018 году Вы получили<br>ХХ писем от IQOS</h1>
+        <h1>В 2018 году Вы получили<br><span id="emails">ХХ</span> писем от IQOS</h1>
         <h2>
           мы всегда сообщаем Вам последние новости<br>бренда, чтобы Вы были в курсе, чтобы<br>не пропустили интересное
         </h2>
       </div>
     </div>
+  </section>
+
+  <section class="thank-you">
+    <div class="thank-you-wrapper">
+      <div><img class="thank-you-label" src="src/img/thank-you/thank-you-title.png" alt=""></div>
+      <h1>
+        <span id="userNameLast"></span>,<br/>
+        Пусть 2019 год станет для Вас полным интересных<br>
+        открытий, новых впечатлений и радостных событий!<br>
+        До встречи в 2019 году!
+      </h1>
+      <h2>Искренне Ваш IQOS.</h2>
+    </div>
+    <!--<video autoplay muted id="iqos-video" class="iqos-video">-->
+      <!--<source src="src/video/IQOS.mp4" type="video/mp4">-->
+    <!--</video>-->
+
+    <!--<video autoplay muted id="iqos-video" class="iqos-video">-->
+      <!--<source src="src/video/IQOS-bg.mp4" type="video/mp4">-->
+    <!--</video>-->
   </section>
 
 </body>

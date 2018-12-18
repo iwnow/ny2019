@@ -2,6 +2,7 @@
 @import "you-and-world";
 @import "we-are-here";
 @import "mails-in-2018";
+@import "thank-you";
 @import '../../node_modules/normalize-scss/sass/normalize/import-now';
 @import 'font';
 
@@ -907,6 +908,12 @@ body.second {
         transform: translate(0, -380px);
         transition: transform 1.5s ease 2s;
 	}
+	@media screen and (max-width: 599px) {
+		.acc1, .acc2, .acc3, .acc4, .acc5, .acc6, .branch2 {
+			transform: translate(0, -380px);
+			transition: transform 1.5s ease 2s;
+		}
+	}
 }
 @media screen and (min-width: 1200px) {
 	.acc1 {
@@ -936,7 +943,7 @@ body.second {
 }
 @media screen and (max-width: 599px) {
 	.sc3.acc {
-		transform: scale(.5);
+		transform: translate(0, -380px) scale(.5);
 	}
 	.acc1 {
 		top: 0;
