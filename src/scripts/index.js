@@ -15,11 +15,14 @@ $('.mails-in-2018').hide();
 $('.thank-you').hide();
 $('.scene4-alter-text').hide();
 
+var isIOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+
+const video = document.getElementById("iqos-video");
+video.pause();
+
 const audio = document.getElementById("iqos-audio");
 audio.volume = 0.3;
-
-// const video = document.getElementById("iqos-video");
-// video.pause();
+audio.play();
 
 const urlParams = new URLSearchParams(window.location.search);
 const spiceId = urlParams.get('spiceId');
@@ -38,14 +41,13 @@ let user = null;
         const daysGone = Math.floor(date / 1000 / 60 / 60 / 24);
 
         if (user && user.accessories && user.accessories > 0) {
+            $('.scene4-text').show();
+            $('.scene4-alter-text').hide();
+        } else {
             $('.scene4-text').hide();
             $('.scene4-alter-text').show();
         }
 
-        if (user && user.accessories && user.accessories > 0) {
-            $('.scene4-text').hide();
-            $('.scene4-alter-text').show();
-        }
         if (user && user.loyalty_level) {
             if (user.loyalty_level.toLowerCase() === 'silver') {
                 $('.our-program-wrapper-gold').remove();
@@ -69,20 +71,20 @@ let user = null;
 
         if (user && user.call_center && user.call_center > 0) {
             $('.we-are-here-alter-text').hide();
-            $('#call_center').text(user.call_center);
+            $('#call_center').text(user.call_center_text);
         } else {
             $('.we-are-here-text').hide();
         }
 
         if (user && user.emails && user.emails > 0) {
-            $('#emails').text(user.emails);
+            $('#emails').text(user.emails_text);
         } else {
             $('#emails').text(0);
         }
 
-        $('#userNameLast').text((user && user.first_name || '').toUpperCase());
-        $('#days-gone').text(daysGone);
-        $('#userName').text((user && user.first_name || '').toUpperCase());
+        $('#userNameLast').text((user && user.first_name || ''));
+        $('#days-gone').text(user.first_iqos_order_date_text);
+        $('#userName').text((user && user.first_name || '') + ',');
         $(document.body).addClass('loaded');
         scene2to3();
         setTimeout(() => {
@@ -144,7 +146,7 @@ let user = null;
 
     function scene3to4 () {
         const speed = 1000;
-        const generalDelay = 4000;
+        const generalDelay = 1000;
         $(document.body).addClass('four');
         $('.sc3.label-wrapper-3').slideUp(1000);
         $('.our-program').fadeIn(speed);
@@ -295,6 +297,9 @@ let user = null;
 
         $('.bg3').width(width).height(bg.height());
 
+        $('.thank-you-label').hide();
+        $('.thank-you-text').hide();
+
         const edgeLeft = (width / 2) - (lineWidth/2);
         const edgeRight = (width / 2) + (lineWidth/2);
         let lines = [];
@@ -328,7 +333,22 @@ let user = null;
         const generalDelayThankYou = 0;
 
         setTimeout(()=> {$(document.body).addClass('eight');}, generalDelayThankYou + 1000);
-        // setTimeout(()=> {video.play();}, generalDelayThankYou + 1200);
+        if (screen.width < 600) {
+            $('#iqos-video').hide();
+            setTimeout(()=> {$('.thank-you-label').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
+            setTimeout(()=> {$('.thank-you-text').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
+            setTimeout(()=> {$('#iqos-video').fadeIn();}, generalDelayThankYou + 8000);
+            setTimeout(()=> {video.play();}, generalDelayThankYou + 8000);
+        } else {
+            setTimeout(()=> {playOnIos();}, generalDelayThankYou + 1200);
+        }
+
         setTimeout(()=> {$('.thank-you').fadeIn(speedThankYou);}, generalDelayThankYou + 2000);
+        setTimeout(()=> {$('.thank-you-label').fadeIn(speedThankYou);}, generalDelayThankYou + 3000);
+        setTimeout(()=> {$('.thank-you-text').slideDown(speedThankYou);}, generalDelayThankYou + 4000);
     }
 })();
+
+function playOnIos() {
+    $('.thank-you').append('<video autoplay muted id="iqos-video" class="iqos-video"><source src="src/video/IQOS-bg-2.mp4" type="video/mp4"></video>');
+}

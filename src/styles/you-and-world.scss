@@ -22,6 +22,9 @@
   }
   .photo-people {
     top: 20px;
+    @media screen and (max-width: 599px) {
+      display: none !important;
+    }
   }
   .ball {
     top: 30px;
@@ -126,6 +129,7 @@
     z-index: 1;
     @media screen and (max-width: 599px) {
       width: auto;
+      padding-top: 10px;
     }
   }
   h1, h2 {
@@ -135,6 +139,9 @@
     font-size: 46px;
     text-align: center;
     margin-bottom: 30px;
+    @media screen and (max-width: 599px) {
+      font-size: 25px;
+    }
   }
   h2 {
     color: #454545;
