@@ -18,18 +18,17 @@ $('.scene4-alter-text').hide();
 var isIOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 
 const video = document.getElementById("iqos-video");
-video.pause();
+if (video) {
+    video.pause();
+}
 
-const playAudio = () => {
-    const audio = document.getElementById("iqos-audio");
+const audio = document.getElementById("iqos-audio");
+if (audio) {
     audio.volume = 0.3;
-    audio.play();
-};
+}
 
 const urlParams = new URLSearchParams(window.location.search);
 const spiceId = urlParams.get('spiceId');
-
-let user = null;
 
 (() => {
     api.getUser(spiceId).then( result => {
@@ -37,12 +36,9 @@ let user = null;
     }).catch(console.error);
 
 
-    function start(data) {
-        user = JSON.parse(data);
+    function start(user) {
         const date = new Date() - new Date(user.first_iqos_order_date);
         const daysGone = Math.floor(date / 1000 / 60 / 60 / 24);
-
-        playAudio();
 
         if (user && user.accessories && user.accessories > 0) {
             $('.scene4-text').show();
