@@ -20,9 +20,11 @@ var isIOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
 const video = document.getElementById("iqos-video");
 video.pause();
 
-const audio = document.getElementById("iqos-audio");
-audio.volume = 0.3;
-audio.play();
+const playAudio = () => {
+    const audio = document.getElementById("iqos-audio");
+    audio.volume = 0.3;
+    audio.play();
+};
 
 const urlParams = new URLSearchParams(window.location.search);
 const spiceId = urlParams.get('spiceId');
@@ -39,6 +41,8 @@ let user = null;
         user = JSON.parse(data);
         const date = new Date() - new Date(user.first_iqos_order_date);
         const daysGone = Math.floor(date / 1000 / 60 / 60 / 24);
+
+        playAudio();
 
         if (user && user.accessories && user.accessories > 0) {
             $('.scene4-text').show();
