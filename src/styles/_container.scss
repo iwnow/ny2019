@@ -29,6 +29,7 @@ html, body {
     background-color: #232324;
 }
 .main-container {
+    position: relative;
     width: 100%;
     flex: 1;
 
@@ -42,4 +43,29 @@ html, body {
         margin: 0 auto;
         overflow: hidden;
     }
+}
+.main-header, .main-footer {
+  z-index: 300;
+}
+
+.footer-content, .header-content {
+  max-width: 1450px;
+  font-size: 15px;
+  margin: 0 auto;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+.header-content {
+  a {
+    color: #d6a86d;
+  }
+}
+.footer-content {
+  a {
+    color: #fff;
+  }
 }

@@ -42,10 +42,17 @@
   }
   .iqos-video {
     position: fixed;
-    right: 0;
+    right: 50%;
+    transform: translateX(50%);
     bottom: 0;
-    min-width: 100%;
+    max-width: 1450px;
     min-height: 100%;
+  }
+  .thank-you-label {
+    font-family: Corinthia;
+  }
+  h1.thank-you-label {
+    font-size: 55px;
   }
 }
 

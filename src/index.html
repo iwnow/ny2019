@@ -6,9 +6,16 @@
   <title>IQOS</title>
 </head>
 <body>
-  <!-- <audio id="iqos-audio" src="src/music/iqos.mp3" autoplay>Ваш браузер не поддерживает <code>audio</code> элемент.</audio> -->
-  <!--<embed src="src/music/iqos.mp3" autostart="true" hidden="true" loop="true" width="300" height="65" align="bottom"> </embed>-->
-  <div class="main-header"></div>
+   <audio id="iqos-audio" src="src/music/iqos.mp3" autoplay>Ваш браузер не поддерживает <code>audio</code> элемент.</audio>
+  <!--<embed src="src/music/iqos.mp3" autostart="true" hidden="true" loop="true" width="300" height="65" align="bottom"></embed>-->
+  <div class="main-header">
+    <div class="header-content">
+      <div>
+        <a href="https://www.iqos.ru/"><img class="logo" src="src/img/iqos-logo.png" alt="IQOS"></a>
+      </div>
+      <div><a href="https://www.iqos.ru/">Все об IQOS</a>&nbsp;&nbsp;<a href="https://www.iqos.ru/shop/iqos/sticks/324/">КУПИТЬ СТИКИ</a></div>
+    </div>
+  </div>
 
   <div class="main-container">
     <div class="content">
@@ -142,9 +149,11 @@
         <img class="decoration-img tape-yellow-left" src="src/img/you-and-world/tape-yellow-left.png" alt="">
         <div class="decoration-img phone">
           <img class="phone__body" src="src/img/you-and-world/phone.png" alt="">
-          <img class="phone__screen phone__screen_one" src="src/img/you-and-world/phone-1.png" alt="">
-          <img class="phone__screen phone__screen_two" src="src/img/you-and-world/phone-2.png" alt="">
-          <img class="phone__screen phone__screen_three" src="src/img/you-and-world/phone-3.png" alt="">
+          <div class="phone__screen-wrapper">
+            <img class="phone__screen phone__screen_one" src="src/img/you-and-world/phone-1.png" alt="">
+            <img class="phone__screen phone__screen_two" src="src/img/you-and-world/phone-2.png" alt="">
+            <img class="phone__screen phone__screen_three" src="src/img/you-and-world/phone-3.png" alt="">
+          </div>
         </div>
         <img class="decoration-img cherry" src="src/img/you-and-world/cherry.png" alt="">
         <img class="decoration-img ribbon" src="src/img/you-and-world/ribbon.png" alt="">
@@ -193,7 +202,10 @@
     
       <section class="thank-you">
         <div class="thank-you-wrapper">
-          <div><img class="thank-you-label" src="src/img/thank-you/thank-you-title.png" alt=""></div>
+          <!--<div><img class="thank-you-label" src="src/img/thank-you/thank-you-title.png" alt=""></div>-->
+          <h1 class="thank-you-label">
+            Спасибо вам<br> за такой насыщенный 2018!
+          </h1>
           <div class="thank-you-text">
             <h1>
               <span id="userNameLast"></span>,<br/>
@@ -215,7 +227,16 @@
     </div>
   </div>
   
-  <div class="main-footer"></div>
+  <div class="main-footer">
+    <div class="footer-content">
+      <div>
+        <a href="https://www.iqos.ru/gde-kupit/">адреса</a>&nbsp;&nbsp;<a href="https://www.iqos.ru/">все об iqos</a>&nbsp;&nbsp;<a href="https://www.iqos.ru/support/faq-list/">faq</a>&nbsp;&nbsp;<a href="https://www.iqos.ru/index.php">КОНТАКТЫ</a>
+      </div>
+      <div>
+        <img class="logo" src="src/img/18.png" alt="IQOS">
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>
