@@ -18,12 +18,12 @@ const mock = {
 export const api = {
     getUser(spiceId) {
         return new Promise((resolve, reject) => {
-            resolve(mock);
-            // const xhr = new XMLHttpRequest();
-            // xhr.open("GET", `https://iqos.interaxions.ru/rest/ny_info/${spiceId}/`);
-            // xhr.onload = () => resolve(JSON.parse(xhr.responseText));
-            // xhr.onerror = () => reject(xhr.statusText);
-            // xhr.send();
+            // resolve(mock);
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", `https://iqos.interaxions.ru/rest/ny_info/${spiceId}/`);
+            xhr.onload = () => resolve(JSON.parse(xhr.responseText));
+            xhr.onerror = () => reject(xhr.statusText);
+            xhr.send();
         });
     }
 };

@@ -5,8 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/favicon.ico" rel="shortcut icon">
   <title>IQOS</title>
+  <style>
+  .loader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 100000;
+    background-color: #ededed;
+  }
+  </style>
 </head>
 <body>
+  <div class="loader"></div>
    <audio id="iqos-audio" src="src/music/iqos.mp3" autoplay>Ваш браузер не поддерживает <code>audio</code> элемент.</audio>
   <!--<embed src="src/music/iqos.mp3" autostart="true" hidden="true" loop="true" width="300" height="65" align="bottom"></embed>-->
   <div class="main-header">

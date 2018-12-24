@@ -18,6 +18,9 @@
         padding-left: 120px;
         margin-top: 0;
     }
+    body.second .label-wrapper-22 {
+        margin-top: 1.2%;
+    }
     .star-1 {
 		top: 140px;
 		right: 120px;
@@ -49,9 +52,9 @@
 		right: 12px;	
 	}
 	.confeti-3 {
-		right: -40px;
-		top: 200px;
-	}
+        right: 2%;
+        top: 30%;
+    }
 	.confeti-4 {
 		top: 280px;
     	left: -40px;
@@ -77,20 +80,20 @@
         left: 110px;
 	}
 	.stik {
-		top: -48px;
-		left: 92px;
-	}
+        top: -20%;
+        left: 22%;
+    }
 	.iqos {
-		top: 86px;
-    left: -70px;
-	}
+        top: 24%;
+        left: -10%;
+    }
 	.hue2 {
-		left: -78px;
-		bottom: -84px;
+		left: -18%;
+    bottom: -38%;
 	}
 	.hue3 {
-		bottom: -40px;
-		left: 32px;
+		bottom: -14%;
+    left: 10%;
     }
     
     .third {
@@ -108,7 +111,7 @@
         }
         .acc1 {
             top: -32px;
-            left: 61%;
+            left: 56%;
         }
         .acc2 {
             top: -22px;
@@ -116,15 +119,15 @@
         }
         .acc3 {
             top: -52px;
-            left: 17%;
+            left: 10%;
         }
         .acc4 {
-            top: -48px;
-            left: 47%;
+            top: -26%;
+    left: 36%;
         }
         .acc6 {
-            top: -50px;
-            right: 10%;
+            top: -10%;
+            right: 6%;
         }
         .acc5 {
             top: -54px;
@@ -136,4 +139,178 @@
             }
         }
     }
+    .four {
+        .acc1, .acc2, .acc3, .acc4, .acc5, .acc6, .branch2 {
+            transform: translate(0, -600px);
+            transition: transform 1.5s ease 2s;
+        }
+    }
+    .our-program {
+        top: 20%;
+
+         h1, h2 {
+            font-size: .8em;
+        }
+        .our-program_two {
+            line-height: 1.4em;
+            top: 50%;
+            font-size: .8em;
+         }
+
+        .our-program_three {
+            top: 30%;
+
+            h2 {
+                line-height: 1.4em;
+                font-size: 1.2em;
+            }
+            h3 {
+                line-height: 1.4em;
+                margin: 0;
+                font-size: .82em;
+            }
+        }
+    }
+    
+
+    
+}
+
+@media screen and (orientation:portrait) and (max-width: 480px) {
+    .stik {
+        top: -4%;
+        left: 46%;
+    }
+    .photo {
+        top: -6%;
+        left: 0%;
+    }
+    .caps1 {
+        top: 116px;
+        left: 48px;
+    }
+    .caps2 {
+        top: 16%;
+        left: 60%;
+    }
+    .stik {
+        top: -12%;
+        left: 46%;
+    }
+    .hue2 {
+        left: -108px;
+        bottom: -68px;
+        width: 280px;
+    }
+    .hue3 {
+        bottom: -4%;
+        left: 24%;
+    }
+    .acc1 {
+        top: -4%;
+        left: 54%;
+    }
+    .acc2 {
+        top: -8%;
+        left: 0%;
+    }
+    .acc3 {
+        display: block;
+        top: -12%;
+        left: 4%;
+    }
+    .acc4 {
+        top: -16%;
+        left: 36%;
+    }
+    .acc5 {
+        top: -18%;
+        right: -1%;
+    }
+    .acc6 {
+        top: -8%;
+    right: -2%;
+        display: block;
+    }
+    .label-wrapper-21 {
+        font-size: .82em;
+    }
+    body.second .label-wrapper-22 {
+        z-index: 1;
+        position: absolute;
+        margin-top: 8.2%;
+        padding-left: 20%;
+        line-height: 1.5em;
+        font-size: .82em;
+    }
+
+    .label-wrapper-3  {
+        margin-top: 80px;
+    }
+    .label-wrapper-3 > div:last-child {
+        margin-top: 6px;
+        font-size: .62rem;
+        line-height: .8rem;
+    }
+.third {
+    .branch2 {
+        height: 100px;
+    }
+    .acc1 {
+		transform: scale(.8) translate(0, 0);
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+	}
+	.acc2 {
+		transform: scale(.8) translate(0, 0);
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .8s;
+	}
+	.acc3 {
+		transform: scale(.5) translate(0, 0) ;
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.3s;
+	}
+	.acc4 {
+		transform: scale(.8) translate(0, 0) ;
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.8s;
+	}
+	.acc5 {
+		transform: scale(.8) translate(0, 0);
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+	}
+	.acc6 {
+		transform: scale(.5) translate(0, 0);
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s;
+    }
+}
+.four {
+    .acc1, .acc2, .acc3, .acc4, .acc5, .acc6, .branch2 {
+        transform: translate(0, -600px);
+        transition: transform 1.5s ease 2s;
+    }
+}
+.our-program {
+    top: 0%;
+
+     h1, h2 {
+        font-size: .8em;
+    }
+    .our-program_two {
+        line-height: 1.4em;
+        top: 50%;
+        font-size: .8em;
+     }
+
+    .our-program_three {
+        top: 44%;
+
+        h2 {
+            line-height: 1.4em;
+            font-size: 1.2em;
+        }
+        h3 {
+            line-height: 1.4em;
+            margin: 0;
+            font-size: .82em;
+        }
+    }
+}   
 }
