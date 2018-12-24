@@ -25,7 +25,6 @@ if (video) {
 const audio = document.getElementById("iqos-audio");
 if (audio) {
     audio.volume = 0.3;
-    audio.play();
 }
 
 const urlParams = new URLSearchParams(window.location.search);
