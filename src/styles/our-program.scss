@@ -22,12 +22,14 @@
   }
   .our-program-wrapper {
     position: relative;
-    top: 50%;
+    top: 57%;
     transform: translateY(-50%);
     margin: 0 auto;
     height: 271px;
     width: 620px;
     z-index: 1;
+    line-height: 2em;
+    text-align: center;
     @media screen and (max-width: 599px) {
       width: auto;
     }
@@ -60,17 +62,22 @@
     }
   }
   .our-program_three {
+    top: 47%;
     h1, h2, h3 {
-      font-size: 48px;
+      font-size: 1.5em;
       color: #efefef;
       font-weight: 100;
       text-align: center;
+      width: auto;
     }
     h2 {
       font-size: 30px;
+      width: auto;
     }
     h3 {
-      font-size: 20px;
+      width: auto;
+      font-size: .92em;
+    line-height: 2.1em;
     }
   }
   .effect {
