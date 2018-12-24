@@ -88,6 +88,10 @@ $('.label-wrapper-22').css({ opacity: 0 });
         $('#userName').text((user && user.first_name || '') + ',');
         $(document.body).addClass('loaded');
         
+        // dev
+        // $('.label-wrapper-1, .label-wrapper-22, .label-wrapper-21, .hues').css('display', 'none');
+        // $(document.body).addClass('third');
+
         scene2to3();
         setTimeout(() => {
             $('.label-wrapper-1').animate({
@@ -112,10 +116,10 @@ $('.label-wrapper-22').css({ opacity: 0 });
               });
         }, 4000);
         setTimeout(scene3to4, 24000);
-        // setTimeout(scene4to5, 41000);
-        // setTimeout(scene5to6, 52000);
-        // setTimeout(scene6to7, 69000);
-        // setTimeout(scene7to8, 78000);
+        setTimeout(scene4to5, 41000);
+        setTimeout(scene5to6, 52000);
+        setTimeout(scene6to7, 69000);
+        setTimeout(scene7to8, 78000);
     }
 
     function scene2to3() {

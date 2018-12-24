@@ -1,0 +1,130 @@
+@media screen and (orientation:portrait) and (min-width: 600px) and (max-width: 800px) {
+    .stik {
+        top: -4%;
+        left: 46%;
+    }
+    .photo {
+        top: 14%;
+        left: 22%;    
+    }
+    .caps2 {
+        top: 16%;
+        left: 60%;
+    }
+    .hue3 {
+        bottom: 4%;
+        left: 24%;
+    }
+.third {
+    .acc1 {
+		transform: translate(0, 0);
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+	}
+	.acc2 {
+		transform: translate(0, 0);
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .8s;
+	}
+	.acc3 {
+		transform: translate(0, 0) ;
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.3s;
+	}
+	.acc4 {
+		transform: translate(0, 0) ;
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.8s;
+	}
+	.acc5 {
+		transform: translate(0, 0);
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+	}
+	.acc6 {
+		transform: translate(0, 0);
+		transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s;
+    }
+}
+.four {
+    .acc1, .acc2, .acc3, .acc4, .acc5, .acc6, .branch2 {
+        transform: translate(0, -600px);
+        transition: transform 1.5s ease 2s;
+    }
+}
+}
+
+@media screen and (orientation:landscape) and (min-width: 800px) and (max-width: 1024px) {
+    .hues {
+        transform: scale(1);
+    }
+    .hue1 {
+        left: -6%;
+        top: -14%;
+    }
+    .hue2 {
+        left: -10.8%;
+        bottom: -14%;
+    }
+    .hue3 {
+        bottom: 0%;
+        left: 22%;
+    }
+    .stik {
+        top: -4%;
+        left: 46%;
+    }
+    .photo {
+        top: 14%;
+        left: 14%;
+    }
+    .caps2 {
+        top: 24%;
+        left: 40%;
+    }
+
+    .label-wrapper-21 {
+        opacity: .8;
+        position: absolute;
+        z-index: 1;
+        margin-top: 6%;
+        padding-left: 20%;
+        font-size: 24pt;
+    }
+    .label-wrapper-22 {
+        z-index: 1;
+        position: absolute;
+        margin-top: 8.2%;
+        padding-left: 17%;
+        line-height: 2em;
+    }
+
+    .third {
+        .acc1 {
+            transform: translate(0, 0);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+        }
+        .acc2 {
+            transform: translate(0, 0);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .8s;
+        }
+        .acc3 {
+            transform: translate(0, 0) ;
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.3s;
+        }
+        .acc4 {
+            transform: translate(0, 0) ;
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.8s;
+        }
+        .acc5 {
+            transform: translate(0, 0);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+        }
+        .acc6 {
+            transform: translate(0, 0);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s;
+        }
+    }
+    .four {
+        .acc1, .acc2, .acc3, .acc4, .acc5, .acc6, .branch2 {
+            transform: translate(0, -600px);
+            transition: transform 1.5s ease 2s;
+        }
+    }
+    
+}
