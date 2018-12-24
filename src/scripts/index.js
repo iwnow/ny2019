@@ -23,10 +23,14 @@ if (video) {
 }
 
 const audio = document.getElementById("iqos-audio");
-if (audio) {
-    audio.volume = 0.3;
-    audio.play();
-}
+setTimeout(() => {
+    if (audio) {
+        audio.volume = 0.3;
+        try {
+            audio.play();
+        } catch (e) {}
+    }
+}, 500);
 
 const urlParams = new URLSearchParams(window.location.search);
 const spiceId = urlParams.get('spiceId');
@@ -34,7 +38,7 @@ $('.label-wrapper-22').css({ opacity: 0 });
 
 (() => {
     api.getUser(spiceId).then( result => {
-        setTimeout(() => { start(result); }, 400);
+        start(result);
     }).catch(console.error);
 
 
@@ -88,10 +92,15 @@ $('.label-wrapper-22').css({ opacity: 0 });
         $('#days-gone').text(user.first_iqos_order_date_text);
         $('#userName').text((user && user.first_name || '') + ',');
         $(document.body).addClass('loaded');
-        
+        $('.loader').css({display: 'none'});
         // dev
         // $('.label-wrapper-1, .label-wrapper-22, .label-wrapper-21, .hues').css('display', 'none');
         // $(document.body).addClass('third');
+        // $('.label-wrapper-1').css('display', 'none');
+        // $('.label-wrapper-21').css({opacity: 0});
+        // $('.label-wrapper-22').css({opacity: 1});
+        // $(document.body).addClass('second');
+        
 
         scene2to3();
         setTimeout(() => {
