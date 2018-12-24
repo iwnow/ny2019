@@ -1,1 +1,95 @@
+@media screen and (orientation: portrait) and (max-width: 400px) {
+  .main-header, .main-footer {
+    height: 45px;
+    a {
+      font-size: 13px;
+    }
+  }
+  .footer-content, .header-content {
+    padding: 0 10px;
+    height: 45px;
+  }
+  .header-content {
+    .logo {
+      height: auto;
+      width: 90px;
+    }
+    .header-links {
+      height: 37px;
+      display: block;
+      justify-content: space-between;
+      width: auto;
+      text-align: right;
+      a {
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
+  .footer-content {
+    img {
+      width: 30px;
+    }
+  }
+  .you-and-world-wrapper {
+    h1, h2 {
+      line-height: 36px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .you-and-world {
+    h3 {
+      font-size: 10px;
+    }
+  }
+  .decoration-img {
+    &.tapes {
+      right: -8%;
+    }
+    &.tape-yellow-right {
+      right: -11%;
+    }
+    &.ball {
+      top: 21px;
+      left: 2%;
+    }
+    &.ribbon {
+      left: -500px
+    }
+  }
+  .our-program {
+    .our-program_three, .our-program_two {
+      top: 25%;
+    }
+    .our-program_one {
+      top: 40%;
+    }
+  }
 
+  .we-are-here {
+    h1, h2 {
+      font-size: 22px;
+      line-height: 36px;
+    }
+    h2 {
+      font-size: 18px;
+    }
+  }
+  .thank-you {
+    .thank-you-wrapper {
+      padding-top: 80px;
+      h1, h2 {
+        font-size: 22px;
+        line-height: 36px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      h1.thank-you-label {
+        font-size: 46px;
+      }
+    }
+  }
+}

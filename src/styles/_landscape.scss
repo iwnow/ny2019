@@ -4,12 +4,20 @@
         height: 35px;
         top: 0;
         background-color: #232324;
+      .logo {
+        height: auto;
+        padding-top: 10px;
+        width: 90px;
+      }
     }
     .main-footer {
         width: 100%;
-        height: 64px;
+        height: 50px;
         bottom: 0;
         background-color: #232324;
+      img {
+        width: 30px;
+      }
     }
     .label-wrapper-1, .label-wrapper-21, .label-wrapper-22 {
 		transform: scale(0.8);
@@ -146,32 +154,130 @@
         }
     }
     .our-program {
-        top: 20%;
+      position: absolute;
+      h1, h2 {
+        font-size: .8em;
+      }
+      .our-program_two {
+        line-height: 1.4em;
+        top: 50%;
+        font-size: .8em;
+      }
 
-         h1, h2 {
-            font-size: .8em;
+      .our-program_three {
+        top: 44%;
+
+        h2 {
+          line-height: 1.4em;
+          font-size: 1.2em;
         }
-        .our-program_two {
-            line-height: 1.4em;
-            top: 50%;
-            font-size: .8em;
-         }
-
-        .our-program_three {
-            top: 30%;
-
-            h2 {
-                line-height: 1.4em;
-                font-size: 1.2em;
-            }
-            h3 {
-                line-height: 1.4em;
-                margin: 0;
-                font-size: .82em;
-            }
+        h3 {
+          line-height: 1.4em;
+          margin: 0;
+          font-size: .82em;
         }
+      }
     }
-    
+
+  .we-are-here {
+    h1, h2 {
+      line-height: 30px;
+      font-size: 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .we-are-here-wrapper {
+      height: auto;
+      width: 440px;
+    }
+  }
+
+  .mails-in-2018 {
+    .column__phone {
+      display: none !important;
+    }
+    .column__label {
+      h1, h2 {
+        line-height: 25px;
+        font-size: 20px;
+      }
+    }
+    .mails-in-2018-wrapper {
+      height: 100%;
+      width: 500px;
+    }
+  }
+
+  .thank-you {
+    .thank-you-wrapper {
+      height: auto;
+      h1, h2 {
+        line-height: 25px;
+        font-size: 20px;
+      }
+      h1 {
+        margin: 5px 0 25px 10px;
+      }
+      h1.thank-you-label {
+        line-height: 35px;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .you-and-world {
+    h1, h2 {
+      line-height: 25px;
+      font-size: 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    h3 {
+      font-size: 10px;
+    }
+    .elka-top {
+      right: 2%;
+    }
+    .lollipop {
+      display: none !important;
+    }
+    .you-and-world .tapes {
+      right: -13%;
+    }
+    .iqos-device {
+      right: -10%;
+    }
+    .spring, .tape-yellow-left, .ribbon {
+      display: none !important;
+    }
+    .you-and-world-wrapper {
+      width: 380px;
+      height: auto;
+    }
+    .phone {
+      left: -1%;
+    }
+    .decoration-img {
+      &.ball {
+        top: 9px;
+        left: 2%;
+      }
+      &.cherry {
+        display: none !important;
+      }
+      &.photo-people {
+        display: none !important;
+      }
+      &.photo-cofee, &.box {
+        display: none !important;
+      }
+      .tape-yellow-right {
+        right: -4%;
+      }
+    }
+  }
 
     
 }
@@ -287,30 +393,5 @@
         transition: transform 1.5s ease 2s;
     }
 }
-.our-program {
-    top: 0%;
 
-     h1, h2 {
-        font-size: .8em;
-    }
-    .our-program_two {
-        line-height: 1.4em;
-        top: 50%;
-        font-size: .8em;
-     }
-
-    .our-program_three {
-        top: 44%;
-
-        h2 {
-            line-height: 1.4em;
-            font-size: 1.2em;
-        }
-        h3 {
-            line-height: 1.4em;
-            margin: 0;
-            font-size: .82em;
-        }
-    }
-}   
 }
