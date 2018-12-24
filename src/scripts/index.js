@@ -113,11 +113,11 @@ $('.label-wrapper-22').css({ opacity: 0 });
               });
         }, 4000);
 
-        // setTimeout(scene3to4, 13000);
-        // setTimeout(scene4to5, 35000);
-        // setTimeout(scene5to6, 46000);
-        // setTimeout(scene6to7, 63000);
-        // setTimeout(scene7to8, 72000);
+        setTimeout(scene3to4, 19000);
+        setTimeout(scene4to5, 41000);
+        setTimeout(scene5to6, 52000);
+        setTimeout(scene6to7, 69000);
+        setTimeout(scene7to8, 78000);
     }
 
     function scene2to3() {
