@@ -16,19 +16,19 @@
     top: 50%;
     transform: translateY(-50%);
     margin: 0 auto;
-    height: 271px;
     width: 620px;
+    height: 597px;
     z-index: 1;
     h1, h2 {
       font-weight: 100;
     }
     h1 {
-      font-size: 20px;
-      line-height: 1.4;
+      font-size: 28px;
+      line-height: 1.8;
       margin: 15px 0 50px 10px;
     }
     h2 {
-      font-size: 16px;
+      font-size: 26px;
       margin-left: 10px;
     }
     @media screen and (max-width: 599px) {
@@ -52,7 +52,13 @@
     font-family: Corinthia;
   }
   h1.thank-you-label {
-    font-size: 55px;
+    font-size: 78px;
+    line-height: 1;
+  }
+  h2 {
+    .thank-you-label{
+      font-size: 36px;
+    }
   }
 }
 

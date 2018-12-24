@@ -25,6 +25,7 @@ if (video) {
 const audio = document.getElementById("iqos-audio");
 if (audio) {
     audio.volume = 0.3;
+    audio.play();
 }
 
 const urlParams = new URLSearchParams(window.location.search);
@@ -65,7 +66,7 @@ $('.label-wrapper-22').css({ opacity: 0 });
         }
         if (user && user.vouchers && user.vouchers > 0) {
             $('.you-and-world-alter-text').hide();
-            $('#vouchers').text(user.vouchers);
+            $('#vouchers').text(user.vouchers_text);
         } else {
             $('.you-and-world-main-text').hide();
         }
@@ -111,7 +112,7 @@ $('.label-wrapper-22').css({ opacity: 0 });
                             }, 6000);
                         });
                         });
-                    
+
                 }, 6000);
               });
         }, 4000);

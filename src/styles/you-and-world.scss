@@ -4,7 +4,7 @@
     position: absolute;
     opacity: 0;
     z-index: 15;
-    transition: z-index 1s ease 2s ;
+    transition: z-index 1s ease 2s;
   }
   .sc3 {
     z-index: 51;
@@ -36,10 +36,10 @@
   }
   .ball {
     top: 30px;
-    left: 10%;
+    left: 25%;
   }
   .elka-top {
-    right: 10%;
+    right: 25%;
   }
   .tapes {
     right: 9%;
@@ -70,8 +70,8 @@
     bottom: 0;
   }
   .lollipop {
-    bottom: 20px;
-    right: 28%;
+    top: 15%;
+    right: 37%;
   }
   .spring {
     bottom: 0;
@@ -133,18 +133,22 @@
     transform: translateY(-50%);
     margin: 0 auto;
     height: 274px;
-    width: 800px;
+    width: 630px;
     z-index: 1;
     @media screen and (max-width: 599px) {
       width: auto;
       padding-top: 10px;
     }
   }
+  .vouchers-label {
+    font-family: NOTO_SANS_REGULAR;
+  }
   h1, h2 {
     font-weight: 100;
     margin: 0;
     font-family: NOTO_SANS_EXTLIGHT_REGULAR;
-    font-size: 46px;
+    font-size: 36px;
+    line-height: 48px;
     text-align: center;
     margin-bottom: 30px;
     @media screen and (max-width: 599px) {
@@ -153,8 +157,8 @@
   }
   h2 {
     color: #454545;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 24px;
+    line-height: 36px;
   }
 
   .animate-phone {
@@ -166,6 +170,16 @@
     .phone__screen_two {
       animation: next-screen 1s ease-out forwards;
     }
+  }
+  h3 {
+    font-size: 15px;
+    color: #737373;
+    position: absolute;
+    font-weight: 100;
+    font-family: NOTO_SANS_REGULAR;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
   }
 }
 .five {
