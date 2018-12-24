@@ -323,7 +323,7 @@
 .hue2 {
 	@include img-stuff(url(/src/styles/img/screen2/Hue_Saturation_2.png));
 	width: 230px;
-	height: 214px;
+	height: 254px;
 	bottom: 0;
 	left: 0;
 }
@@ -363,32 +363,8 @@
 	top: 20px;
 	left: 300px;
 }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//body, html {
-//	width: 100%;
-//	height: 100%;
-//	margin: 0;
-//	padding: 0;
-//}
-//
-//
-//
-//
-//
-//
-//
 .hues {
 	opacity: 0;
-	//transform: scale(.8)
 }
 body:not(.second) {
 	.hues {
@@ -437,12 +413,9 @@ body.second {
 	.label-wrapper-22 {
 		z-index: 1;
 		position: absolute;
-		margin-top: 32px;
-	padding-left: 80px;
-
-		&>div {
-			margin-bottom: 16px;
-		}
+		margin-top: 3.2%;
+		padding-left: 17%;
+		line-height: 2em;
 	}
 }
 .first-screen {
@@ -456,6 +429,7 @@ body.second {
 		text-align: center;
 		z-index: 100;
 		position: absolute;
+		margin-top: .3em;
 	}
 	.name {
 		@extend .fo-e-lig;
@@ -467,7 +441,7 @@ body.second {
     .question {
 		@extend .fo-lig;
 		font-size: 24pt;
-		margin-top: 36px;
+		margin-top: .325em;
 		opacity: 0;
 		transform: translateY(50px)
 	}
@@ -515,8 +489,8 @@ body.second {
 	opacity: .8;
 	position: absolute;
 	z-index: 1;
-	margin-top: 32px;
-	padding-left: 80px;
+	margin-top: 4%;
+    padding-left: 20%;
 	font-size: 24pt;
 
 	&>div {
@@ -527,10 +501,10 @@ body.second {
 		font-family: Corinthia;
 		color: #a83e4f;
 		font-weight: 100;
-		font-size: 70pt;
+		font-size: 4em;
 	}
 	.last {
-		margin-top: -20px;
+		margin-top: -8%;
 	}
 }
 
@@ -1070,8 +1044,11 @@ body.second {
 	.confeti-5 {
 	}
 	.confeti-1 {
+		top: 10px;
+    left: 24%;
 	}
 	.confeti-2 {
+		right: 14%;
 	}
 	.hue1 {
 		//top: -62px;
@@ -1080,13 +1057,19 @@ body.second {
 		left: -48px;
 	}
 	.confeti-4 {
+		top: 28%;
+    left: -2%;
 	}
 	.confeti-5 {
+		bottom: -6%;
+    left: 10%;
 	}
-	.confeti-1 {
+	.confeti-6 {
+		bottom: -6%;
+    right: 12%;
 	}
-	.confeti-2 {
-
+	.confeti-3 {
+		top: 32%;
 	}
 	.photo {
 		//top: 134px;

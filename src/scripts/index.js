@@ -89,34 +89,37 @@ $('.label-wrapper-22').css({ opacity: 0 });
         $(document.body).addClass('loaded');
         
         scene2to3();
-        
-        setTimeout(() => {
-            $('.label-wrapper-1').animate({
-                opacity: 0,
-              }, 500, function() {
-                $('.label-wrapper-1').css('display', 'none');
-                $(document.body).addClass('second');
-                setTimeout(() => {
-                    $('.label-wrapper-21').animate({
-                        opacity: 0,
-                        }, 500, function() {
-                        $('.label-wrapper-22').animate({ opacity: .8 }, 500, function(){
-                            setTimeout(() => {
-                                $('.label-wrapper-22').animate({ opacity: 0 }, 500);
-                                $(document.body).addClass('third');
-                            }, 6000);
-                        });
-                        });
+        $('.label-wrapper-1').css('display', 'none');
+        $(document.body).addClass('second');
+        $('.label-wrapper-21').css({opacity:0});
+        $('.label-wrapper-22').css({opacity:.8});
+        // setTimeout(() => {
+        //     $('.label-wrapper-1').animate({
+        //         opacity: 0,
+        //       }, 500, function() {
+        //         $('.label-wrapper-1').css('display', 'none');
+        //         $(document.body).addClass('second');
+        //         setTimeout(() => {
+        //             $('.label-wrapper-21').animate({
+        //                 opacity: 0,
+        //                 }, 500, function() {
+        //                 $('.label-wrapper-22').animate({ opacity: .8 }, 500, function(){
+        //                     setTimeout(() => {
+        //                         $('.label-wrapper-22').animate({ opacity: 0 }, 500);
+        //                         $(document.body).addClass('third');
+        //                     }, 6000);
+        //                 });
+        //                 });
                     
-                }, 6000);
-              });
-        }, 4000);
+        //         }, 6000);
+        //       });
+        // }, 4000);
 
-        setTimeout(scene3to4, 19000);
-        setTimeout(scene4to5, 41000);
-        setTimeout(scene5to6, 52000);
-        setTimeout(scene6to7, 69000);
-        setTimeout(scene7to8, 78000);
+        // setTimeout(scene3to4, 19000);
+        // setTimeout(scene4to5, 41000);
+        // setTimeout(scene5to6, 52000);
+        // setTimeout(scene6to7, 69000);
+        // setTimeout(scene7to8, 78000);
     }
 
     function scene2to3() {
