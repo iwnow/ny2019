@@ -1,0 +1,139 @@
+@media (max-height: 420px) and (orientation: landscape) {
+    .main-header {
+        width: 100%;
+        height: 35px;
+        top: 0;
+        background-color: #232324;
+    }
+    .main-footer {
+        width: 100%;
+        height: 64px;
+        bottom: 0;
+        background-color: #232324;
+    }
+    .label-wrapper-1, .label-wrapper-21, .label-wrapper-22 {
+		transform: scale(0.8);
+    }
+    .label-wrapper-21, .label-wrapper-22 {
+        padding-left: 120px;
+        margin-top: 0;
+    }
+    .star-1 {
+		top: 140px;
+		right: 120px;
+	}
+	.halo-left {
+		bottom: -50px;
+		left: -74px;
+	}
+	.halo-right {
+		bottom: 200px;
+		right: -500px;
+	}
+	.boken2 {
+		display: none;
+	}
+	.hues, .confeti {
+		transform: scale(.5)
+	}
+	.hue1 {
+        top: -162px;
+        left: -150px;
+	}
+	.confeti-1 {
+		top: 0;
+		left: 6px;
+	}
+	.confeti-2 {
+		top: -46px;
+		right: 12px;	
+	}
+	.confeti-3 {
+		right: -40px;
+		top: 200px;
+	}
+	.confeti-4 {
+		top: 280px;
+    	left: -40px;
+	}
+	.confeti-5 {
+		bottom: -38px;
+		left:16px;
+	}
+	.confeti-6 {
+		bottom: -64px;
+		right: 12px;
+	}
+	.photo {
+		top: -16px;
+		left: -38px;	
+	}
+	.caps1 {
+        top: 106px;
+        left: 60px;
+	}
+	.caps2 {
+        top: 116px;
+        left: 110px;
+	}
+	.stik {
+		top: -48px;
+		left: 92px;
+	}
+	.iqos {
+		top: 86px;
+    left: -70px;
+	}
+	.hue2 {
+		left: -78px;
+		bottom: -84px;
+	}
+	.hue3 {
+		bottom: -40px;
+		left: 32px;
+    }
+    
+    .third {
+        .branch2 {
+            height: 144px;
+        }
+        .label-wrapper-3 {
+            opacity: .7 !important;
+            transition: opacity 1s linear .8s;
+            transform: scale(.5);
+            margin-top: 32px;
+        }
+        .acc {
+            transform: scale(.5)
+        }
+        .acc1 {
+            top: -32px;
+            left: 61%;
+        }
+        .acc2 {
+            top: -22px;
+            left: 5%;
+        }
+        .acc3 {
+            top: -52px;
+            left: 17%;
+        }
+        .acc4 {
+            top: -48px;
+            left: 47%;
+        }
+        .acc6 {
+            top: -50px;
+            right: 10%;
+        }
+        .acc5 {
+            top: -54px;
+            right: 5%;
+        }
+        @media screen and (max-width: 599px) {
+            .acc1, .acc2, .acc3, .acc4, .acc5, .acc6, .branch2 {
+                transform: translate(0, 0);
+            }
+        }
+    }
+}
