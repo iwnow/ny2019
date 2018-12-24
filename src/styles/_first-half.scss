@@ -1,4 +1,5 @@
 @import 'font';
+@import 'mix';
 
 @mixin star-animation($sec, $delay: 0) {
 	-webkit-animation: star-anim #{$sec}s ease infinite;
@@ -63,48 +64,55 @@
 	position: absolute;
 	z-index: 0;
 	opacity: 0;
+	transform: scale(.8);
 }
 .confeti-1 {
-	background-image: url(/src/styles/img/screen1/confeti-1.png);
-	bottom: 0;
-	left: 10px;
-	height: 40px;
-	width: 123px;
+	$bgi: url(/src/styles/img/screen1/conf21.png);
+	background: $bgi no-repeat;
+	top: 20px;
+	left: 306px;
+	height: 104px;
+	width: 144px;
 }
 .confeti-2 {
-	height: 73px;
-	width: 97px;
-	bottom: 0;
-    right: 0;
-	background-image: url(/src/styles/img/screen1/confeti-2.png);
+	height: 139px;
+	width: 120px;
+	top: -32px;
+    right: 212px;
+	$bgi: url(/src/styles/img/screen1/conf22.png);
+	background: $bgi no-repeat;
 }
 .confeti-3 {
-	height: 81px;
-	width: 63px;
-	background-image: url(/src/styles/img/screen1/confeti-3.png);
-	left: 0;
-    top: 100px;
+	height: 67px;
+	width: 99px;
+	$bgi: url(/src/styles/img/screen1/conf23.png);
+	background: $bgi no-repeat;
+	right: 56px;
+    top: 226px;
 }
 .confeti-4 {
-	background-image: url(/src/styles/img/screen1/confeti-4.png);
-	height: 52px;
-	width: 87px;
-	top: 0;
-    left: 240px;
+	$bgi: url(/src/styles/img/screen1/conf24.png);
+	background: $bgi no-repeat;
+	height: 92px;
+	width:132px;
+	top: 250px;
+    left: -26px;
 }
 .confeti-5 {
-	background-image: url(/src/styles/img/screen1/confeti-5.png);
-	height: 66px;
-	width: 61px;
-	top: 0;
-    right: 80px;
+	$bgi: url(/src/styles/img/screen1/conf25.png);
+	background: $bgi no-repeat;
+	height: 106px;
+	width: 142px;
+	bottom: -38px;
+    left:160px;
 }
 .confeti-6 {
-	background-image: url(/src/styles/img/screen1/confeti-6.png);
-	height: 70px;
-	width: 80px;
-	top: 120px;
-    right: 20px;
+	$bgi: url(/src/styles/img/screen1/conf26.png);
+	background: $bgi no-repeat;
+	height: 149px;
+	width: 154px;
+	bottom: -64px;
+    right: 212px;
 }
 .halo-layer {
 	position: absolute;
@@ -325,6 +333,7 @@
 	height: 132px;
 	left: 100px;
 	bottom: 100px;
+	transform: rotate(30deg);
 }
 .caps1 {
 	@include img-stuff(url(/src/styles/img/screen2/IQOS_Caps_1.png));
@@ -379,6 +388,7 @@
 //
 .hues {
 	opacity: 0;
+	//transform: scale(.8)
 }
 body:not(.second) {
 	.hues {
@@ -415,21 +425,23 @@ body.second {
 	.hue3 {
 		transition: opacity 1s linear 100ms;
 	}
-	.label-wrapper-2 {
-		.ny {
-			opacity: 1;
-			transform: translateY(0);
-			transition:
-				opacity 1s linear,
-				transform .5s linear;
-		}
-
-		.wantsay, .thank, .last {
+	.label-wrapper-21 {
+		&>div, .wantsay, .thank, .last {
 			opacity: 1;
 			transform: translateY(0);
 			transition:
 				opacity 1s linear .5s,
 				transform .5s linear .5s;
+		}
+	}
+	.label-wrapper-22 {
+		z-index: 1;
+		position: absolute;
+		margin-top: 32px;
+	padding-left: 80px;
+
+		&>div {
+			margin-bottom: 16px;
 		}
 	}
 }
@@ -443,6 +455,7 @@ body.second {
 	.label-wrapper-1 {
 		text-align: center;
 		z-index: 100;
+		position: absolute;
 	}
 	.name {
 		@extend .fo-e-lig;
@@ -480,6 +493,9 @@ body.second {
 	.confeti-5 {
 		transition: opacity 1s linear 900ms;
 	}
+	.confeti-6 {
+		transition: opacity 1s linear 600ms;
+	}
 	.name {
 		opacity: 1;
 		transform: translateY(0);
@@ -495,49 +511,29 @@ body.second {
 			transform .5s linear .5s;
 	}
 }
-.label-wrapper-2 {
+.label-wrapper-21 {
 	opacity: .8;
 	position: absolute;
 	z-index: 1;
 	margin-top: 32px;
-	padding: 0 20px 0 40px;
-	font-size: .5rem;
+	padding-left: 80px;
+	font-size: 24pt;
 
+	&>div {
+		opacity: 0;
+		transform: translateY(50px)
+	}
 	.thank {
+		font-family: Corinthia;
 		color: #a83e4f;
-		font-weight: 800;
-		margin-top: 4px;
-		opacity: 0;
-		transform: translateY(50px)
-	}
-
-	.ny {
-		color: #a83e4f;
-		font-size: 36px;
-		opacity: 0;
-		transform: translateY(50px)
-	}
-
-	.wantsay {
-		line-height: 1.2em;
-		margin-top: 20px;
-		opacity: 0;
-		transform: translateY(50px)
+		font-weight: 100;
+		font-size: 70pt;
 	}
 	.last {
-		margin-top: 6px;
-		opacity: 0;
-		transform: translateY(50px)
+		margin-top: -20px;
 	}
 }
 
-@mixin img-center-cover($url) {
-	background: $url no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 .bg3 {
 	position: absolute;
 	z-index: 2;
@@ -820,17 +816,21 @@ body.second {
 	.acc3, .acc6 {
 		display: none;
 	}
+	.label-wrapper-21, .label-wrapper-22 {
+		transform: scale(.8);
+
+	}
 }
 .label-wrapper-3 {
 	position: absolute;
 	z-index: 4;
-	margin-top: -80px;
+	margin-top: 20px;
 	padding: 0 20px 0 40px;
 	color: white;
     opacity: 0 !important;
 	text-align: center;
 	&>div {
-		margin-top: 12px;
+		margin-top: 28px;
 	}
 	&>div:last-child {
 		margin-top: 20px;
@@ -984,6 +984,9 @@ body.second {
 }
 
 @media screen and (max-width: 599px) {
+	.label-wrapper-1 {
+		transform: scale(0.8);
+	}
     .star-1 {
 		top: 140px;
 		right: 120px;
@@ -1003,32 +1006,40 @@ body.second {
 		transform: scale(.5)
 	}
 	.hue1 {
-		top: -110px;
-		left: -120px;
-	}
-	.confeti-4 {
-		top: 0px;
-		left: 79px;
-	}
-	.confeti-5 {
-		top: -18px;
-		right: 34px;
-	}
-	.confeti-6 {
-		right: -10px;
+		    top: -146px;
+    left: -134px;
+
 	}
 	.confeti-1 {
-		bottom: -10px;
+		top: 0;
+		left: 6px;
 	}
 	.confeti-2 {
-		bottom: -20px;
+		top: -46px;
+		right: 12px;	
+	}
+	.confeti-3 {
+		right: -40px;
+		top: 200px;
+	}
+	.confeti-4 {
+		top: 280px;
+    	left: -40px;
+	}
+	.confeti-5 {
+		bottom: -38px;
+		left:16px;
+	}
+	.confeti-6 {
+		bottom: -64px;
+		right: 12px;
 	}
 	.photo {
-		top: 24px;
-		left: 0;
+		top: -16px;
+		left: -10px;	
 	}
 	.caps1 {
-		top: 158px;
+		top: 116px;
 		left: 74px;
 	}
 	.caps2 {
@@ -1036,11 +1047,11 @@ body.second {
     left: 200px;
 	}
 	.stik {
-		top: -3px;
-    left: 105px;
+		top: -48px;
+		left: 92px;
 	}
 	.iqos {
-		top: 120px;
+		top: 86px;
     left: -70px;
 	}
 	.hue2 {
@@ -1057,29 +1068,10 @@ body.second {
 		display: block;
 	}
 	.confeti-5 {
-		right: 300px;
-	}
-	.confeti-6 {
-		right: 120px;
 	}
 	.confeti-1 {
-		left: 200px;
 	}
 	.confeti-2 {
-		right: 50px;
-	}
-
-	.label-wrapper-2 {
-		margin-top: 0;
-		font-size: 26px;
-		margin-left: 100px;
-
-		.thank, .last {
-			margin-top: 20px;
-		}
-		.wantsay {
-			margin-top: 40px;
-		}
 	}
 	.hue1 {
 		//top: -62px;
@@ -1088,21 +1080,13 @@ body.second {
 		left: -48px;
 	}
 	.confeti-4 {
-		top: 0px;
-		left: 146px;
 	}
 	.confeti-5 {
-		top: -18px;
-		right: 34px;
-	}
-	.confeti-6 {
-		right: -10px;
 	}
 	.confeti-1 {
-		bottom: -10px;
 	}
 	.confeti-2 {
-		bottom: -20px;
+
 	}
 	.photo {
 		//top: 134px;
@@ -1136,9 +1120,9 @@ body.second {
 	.hue3 {
 		//bottom: 72px;
 		//left: 160px;
-		bottom: 92px;
+		bottom: 62px;
 		width: 200px;
-		left: 124px;
+		left: 264px;
 		height: 175px;
 	}
 }

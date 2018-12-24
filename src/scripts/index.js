@@ -29,6 +29,7 @@ if (audio) {
 
 const urlParams = new URLSearchParams(window.location.search);
 const spiceId = urlParams.get('spiceId');
+$('.label-wrapper-22').css({ opacity: 0 });
 
 (() => {
     api.getUser(spiceId).then( result => {
@@ -86,7 +87,9 @@ const spiceId = urlParams.get('spiceId');
         $('#days-gone').text(user.first_iqos_order_date_text);
         $('#userName').text((user && user.first_name || '') + ',');
         $(document.body).addClass('loaded');
+        
         scene2to3();
+        
         setTimeout(() => {
             $('.label-wrapper-1').animate({
                 opacity: 0,
@@ -94,16 +97,26 @@ const spiceId = urlParams.get('spiceId');
                 $('.label-wrapper-1').css('display', 'none');
                 $(document.body).addClass('second');
                 setTimeout(() => {
-                    $(document.body).addClass('third');
+                    $('.label-wrapper-21').animate({
+                        opacity: 0,
+                        }, 500, function() {
+                        $('.label-wrapper-22').animate({ opacity: .8 }, 500, function(){
+                            setTimeout(() => {
+                                $('.label-wrapper-22').animate({ opacity: 0 }, 500);
+                                $(document.body).addClass('third');
+                            }, 6000);
+                        });
+                        });
+                    
                 }, 6000);
               });
-        }, 2000);
+        }, 4000);
 
-        setTimeout(scene3to4, 13000);
-        setTimeout(scene4to5, 35000);
-        setTimeout(scene5to6, 46000);
-        setTimeout(scene6to7, 63000);
-        setTimeout(scene7to8, 72000);
+        // setTimeout(scene3to4, 13000);
+        // setTimeout(scene4to5, 35000);
+        // setTimeout(scene5to6, 46000);
+        // setTimeout(scene6to7, 63000);
+        // setTimeout(scene7to8, 72000);
     }
 
     function scene2to3() {
