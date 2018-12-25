@@ -118,10 +118,10 @@ $('.label-wrapper-22').css({ opacity: 0 });
               });
         }, 4000);
         setTimeout(scene3to4, 24000);
-        setTimeout(scene4to5, 41000);
-        setTimeout(scene5to6, 52000);
-        setTimeout(scene6to7, 69000);
-        setTimeout(scene7to8, 78000);
+        setTimeout(scene4to5, 34000);
+        setTimeout(scene5to6, 45000);
+        setTimeout(scene6to7, 62000);
+        setTimeout(scene7to8, 71000);
     }
 
     function scene2to3() {
@@ -172,10 +172,10 @@ $('.label-wrapper-22').css({ opacity: 0 });
         setTimeout(()=> {$('.our-program_one').slideDown(speed);}, generalDelay + 2000);
         setTimeout(()=> {$('.our-program_one').slideUp(speed);}, generalDelay + 5000);
 
-        setTimeout(()=> {$('.our-program_two').slideDown(speed);}, generalDelay + 6000);
-        setTimeout(()=> {$('.our-program_two').slideUp(speed);}, generalDelay + 12000);
+        // setTimeout(()=> {$('.our-program_two').slideDown(speed);}, generalDelay + 6000);
+        // setTimeout(()=> {$('.our-program_two').slideUp(speed);}, generalDelay + 12000);
 
-        setTimeout(()=> {$('.our-program_three').slideDown(speed);}, generalDelay + 13000);
+        setTimeout(()=> {$('.our-program_three').slideDown(speed);}, generalDelay + 6000);
     }
 
     function scene4to5() {

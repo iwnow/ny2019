@@ -395,3 +395,57 @@
 }
 
 }
+
+//iphone 5
+@media screen and (orientation: landscape) and (max-height: 320px) {
+  body.second .label-wrapper-22 {
+    padding-left: 110px !important;
+    font-size: 26px;
+  }
+  .label-wrapper-3 {
+    font-size: .75rem;
+  }
+  .third .acc4 {
+    top: -26%;
+    left: 19%;
+  }
+  .third .acc1 {
+    top: -32px;
+    left: 68%;
+  }
+  .our-program .our-program_three h2 {
+    line-height: 1em;
+    font-size: 0.8em;
+  }
+  .our-program .our-program_three h1 {
+    font-size: 1.2em;
+  }
+  .our-program .our-program_three h3 {
+    line-height: 1.2em;
+    margin: 0;
+    font-size: .65em;
+  }
+  .our-program .our-program_three {
+    top: 75%;
+  }
+  .our-program .our-program-wrapper {
+    top: 85%;
+    line-height: 1.5;
+  }
+  .you-and-world .tapes {
+    right: 3%;
+  }
+  .we-are-here h1, .we-are-here h2 {
+    line-height: 27px;
+    font-size: 17px;
+  }
+  .thank-you .thank-you-wrapper h1 {
+    font-size: 25px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+  .thank-you .thank-you-wrapper h1, .thank-you .thank-you-wrapper h2 {
+    line-height: 20px;
+    font-size: 16px;
+  }
+}
