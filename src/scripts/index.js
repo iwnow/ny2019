@@ -42,7 +42,7 @@ setTimeout(() => {
 }, 500);
 
 const urlParams = new URLSearchParams(window.location.search);
-const spiceId = urlParams.get('spiceId');
+const spiceId = urlParams.get('id');
 $('.label-wrapper-22').css({ opacity: 0 });
 
 (() => {
@@ -123,7 +123,6 @@ $('.label-wrapper-22').css({ opacity: 0 });
               });
         }, 4000);
 
-        // setTimeout(scene6to7, 1000);
         setTimeout(scene3to4, 24000);
         setTimeout(scene4to5, 34000);
         setTimeout(scene5to6, 45000);

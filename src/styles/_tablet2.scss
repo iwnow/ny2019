@@ -58,6 +58,11 @@
 }
 
 @media screen and (orientation:landscape) and (min-width: 800px) and (max-width: 1024px) {
+    .mails-in-2018 {
+        .decoration-icons {
+            top: 275px;
+        }
+    }
     .mails-in-2018 .column__phone {
         position: relative;
         align-self: flex-end;

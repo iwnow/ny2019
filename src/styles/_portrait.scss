@@ -3,6 +3,9 @@
     font-family: NOTO_SANS_EXTLIGHT_REGULAR;
     position: relative;
     background-image: url(./../img/our-program/Mobile-BG.jpg);
+    .our-program-tape {
+      background-image: url(./../img/our-program/Mobile-BG.jpg);
+    }
   }
   .main-header, .main-footer {
     height: 45px;
@@ -165,6 +168,9 @@
     width: 300px;
   }
   .mails-in-2018 {
+    .decoration-icons {
+      top: 275px;
+    }
     h1, h2 {
       font-size: 28px;
       line-height: 40px;
