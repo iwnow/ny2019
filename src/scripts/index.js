@@ -38,7 +38,7 @@ setTimeout(() => {
 }, 500);
 
 const urlParams = new URLSearchParams(window.location.search);
-const spiceId = urlParams.get('spiceId');
+const spiceId = urlParams.get('id');
 $('.label-wrapper-22').css({ opacity: 0 });
 
 (() => {
