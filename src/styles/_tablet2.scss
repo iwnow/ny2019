@@ -58,6 +58,19 @@
 }
 
 @media screen and (orientation:landscape) and (min-width: 800px) and (max-width: 1024px) {
+    .mails-in-2018 .column__phone {
+        position: relative;
+        align-self: flex-end;
+        margin-bottom: -6px;
+        z-index: 120;
+        transform: scale(0.7);
+        bottom: -105px;
+    }
+    .mails-in-2018 .mails-in-2018-wrapper .column__label {
+        z-index: 102;
+        align-self: center;
+        padding-left: 0;
+    }
     .hues {
         transform: scale(1);
     }
@@ -134,5 +147,25 @@
             transition: transform 1.5s ease 2s;
         }
     }
-    
+    .label-wrapper-3 {
+        margin-top: 11%;
+    }
+    .you-and-world {
+        .photo-cofee {
+            display: none !important;
+        }
+        .photo-people {
+            top: -116px;
+        }
+        .cherry, .ball {
+            display: none !important;
+        }
+        .phone {
+            left: 0;
+        }
+        .box {
+            right: -12%;
+            bottom: 10%;
+        }
+    }
 }

@@ -15,7 +15,7 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
-    margin: 0 auto;
+    margin-left: 10%;
     width: 620px;
     height: 597px;
     z-index: 1;
@@ -59,6 +59,16 @@
     .thank-you-label{
       font-size: 36px;
     }
+  }
+  .elka-thank-you {
+    position: absolute;
+    top: 0;
+    z-index: 201;
+    height: 100%;
+    width: 100%;
+    background-image: url(./../img/thank-you/bg2.png);
+    background-size: cover;
+    background-position: right;
   }
 }
 

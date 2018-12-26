@@ -1,4 +1,9 @@
 @media screen and (orientation:portrait) and (min-width: 600px){
+  .our-program {
+    font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+    position: relative;
+    background-image: url(./../img/our-program/Tablet-BG.jpg);
+  }
   .you-and-world {
     .you-and-world-wrapper {
       width: 540px;
@@ -32,7 +37,10 @@
       right: -80px;
     }
     .photo-cofee {
-      top: -40px;
+      display: none !important;
+    }
+    .photo-people {
+      top: -52px;
     }
     .lollipop {
       top: 180px;

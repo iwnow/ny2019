@@ -64,7 +64,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     width: 254px;
-
+    padding-right: 45px;
     a {
       text-decoration: none;
       border-bottom: 1px solid;
@@ -74,8 +74,8 @@ html, body {
 .footer-content, .header-content {
   
   margin: 0 auto;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 20px;
   display: flex;
   height: 100%;
   align-items: center;
@@ -92,4 +92,8 @@ html, body {
   a {
     color: #fff;
   }
+}
+
+.days-gone {
+  font-family: NOTO_SANS_REGULAR;
 }

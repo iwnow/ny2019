@@ -112,7 +112,7 @@
             opacity: .7 !important;
             transition: opacity 1s linear .8s;
             transform: scale(.5);
-            margin-top: 32px;
+            margin-top: 40px;
         }
         .acc {
             transform: scale(.5)
@@ -210,11 +210,18 @@
   }
 
   .thank-you {
+    .iqos-video {
+      transform: none;
+      right: 0;
+      max-width: 640px;
+      min-height: 360px;
+    }
     .thank-you-wrapper {
+      width: 400px;
       height: auto;
       h1, h2 {
-        line-height: 25px;
-        font-size: 20px;
+        line-height: 22px;
+        font-size: 18px;
       }
       h1 {
         margin: 5px 0 25px 10px;
@@ -257,7 +264,10 @@
       height: auto;
     }
     .phone {
-      left: -1%;
+      left: -6%;
+      top: -8%;
+      transform: rotate(-15deg) scale(0.4);
+      bottom: 30%;
     }
     .decoration-img {
       &.ball {
@@ -351,7 +361,7 @@
     }
 
     .label-wrapper-3  {
-        margin-top: 80px;
+        margin-top: 40px;
     }
     .label-wrapper-3 > div:last-child {
         margin-top: 6px;
@@ -447,5 +457,34 @@
   .thank-you .thank-you-wrapper h1, .thank-you .thank-you-wrapper h2 {
     line-height: 20px;
     font-size: 16px;
+  }
+}
+
+//iphone 6 and more screen
+@media (max-height: 420px) and (min-width: 610px) and (orientation: landscape) {
+  .thank-you {
+    .iqos-video {
+      max-width: 100%;
+      min-height: 360px;
+    }
+  }
+  body.second .hue2 {
+    display: none !important;
+  }
+  body.second .photo {
+    display: none !important;
+  }
+  body.second .hue1 {
+    top: -75px;
+    transform: scale(0.6);
+  }
+  body.second .iqos {
+    top: 36%;
+  }
+  body.second .hue3 {
+    bottom: -25%;
+  }
+  body.second .caps2 {
+    top: 14%;
   }
 }

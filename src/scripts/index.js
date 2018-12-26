@@ -14,8 +14,17 @@ $('.column__label').hide();
 $('.mails-in-2018').hide();
 $('.thank-you').hide();
 $('.scene4-alter-text').hide();
+$('.thank-you-label').hide();
+$('.thank-you-text').hide();
+$('.elka-thank-you').hide();
 
-var isIOS = !!navigator.platform && /iPad|iPhone|iPod/.test(navigator.platform);
+if (screen.width > 700) {
+    $('.level-mobile').remove();
+} else {
+    $('.level').remove();
+}
+
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
 const video = document.getElementById("iqos-video");
 if (video) {
@@ -43,6 +52,8 @@ $('.label-wrapper-22').css({ opacity: 0 });
 
 
     function start(user) {
+        // hideSpiceId();
+        window.addEventListener('orientationchange', changeOrientation);
         const date = new Date() - new Date(user.first_iqos_order_date);
         const daysGone = Math.floor(date / 1000 / 60 / 60 / 24);
 
@@ -105,61 +116,33 @@ $('.label-wrapper-22').css({ opacity: 0 });
                     $('.label-wrapper-21').animate({
                         opacity: 0,
                         }, 500, function() {
-                        $('.label-wrapper-22').animate({ opacity: .8 }, 500, function(){
-                            setTimeout(() => {
-                                $('.label-wrapper-22').animate({ opacity: 0 }, 500);
-                                $(document.body).addClass('third');
-                                $('.hues').css({display:'none'});
-                            }, 6000);
-                        });
+                            setTimeout(toAccesuares, 400);
                         });
 
                 }, 6000);
               });
         }, 4000);
-        setTimeout(scene3to4, 24000);
-        setTimeout(scene4to5, 34000);
-        setTimeout(scene5to6, 45000);
-        setTimeout(scene6to7, 62000);
-        setTimeout(scene7to8, 71000);
+
+        setTimeout(scene6to7, 1000);
+        // setTimeout(scene3to4, 24000);
+        // setTimeout(scene4to5, 34000);
+        // setTimeout(scene5to6, 45000);
+        // setTimeout(scene6to7, 62000);
+        // setTimeout(scene7to8, 71000);
     }
 
     function scene2to3() {
-        const bg = $('.bg');
-        const width = bg.width();
-        let lineWidth = width / 6;
-        lineWidth = lineWidth < 200 ? 200 : lineWidth;
-        
-        $('.bg3').width(width).height(bg.height());
-        
-        const edgeLeft = (width / 2) - (lineWidth/2);
-        const edgeRight = (width / 2) + (lineWidth/2);
-        let lines = [];
-        let j = 1;
-        for (let i = 7; i > 0; i--) {
-            let even = i % 2 === 0;
-            lines.push(
-                $(`<div class="bg4 line${i} ${even ? 'even' : 'odd'}"></div>`)
-                    .width(lineWidth)
-                    .css('left', `${edgeLeft - j*lineWidth + j}px`)
-            );
-            j++;
-        }
-        lines.push(
-            $(`<div class="bg4 line8 even"></div>`)
-                .width(lineWidth)
-        );
-        j = 0;
-        for (let i = 9; i < 16; i++) {
-            let even = i % 2 === 0;
-            lines.push(
-                $(`<div class="bg4 line${i} ${even ? 'even' : 'odd'}"></div>`)
-                    .width(lineWidth)
-                    .css('left', `${edgeRight + j*lineWidth - j - 1}px`)
-            );
-            j++;
-        }
-        $('.first-screen').append(lines);
+        showLinesAnimation('bg4');
+    }
+
+    function toAccesuares() {
+        $('.label-wrapper-22').animate({ opacity: .8 }, 500, function(){
+            setTimeout(() => {
+                $('.label-wrapper-22').animate({ opacity: 0 }, 500);
+                $(document.body).addClass('third');
+                $('.hues').css({display:'none'});
+            }, 6000);
+        });
     }
 
     function scene3to4 () {
@@ -168,6 +151,15 @@ $('.label-wrapper-22').css({ opacity: 0 });
         $(document.body).addClass('four');
         $('.sc3.label-wrapper-3').slideUp(1000);
         $('.our-program').fadeIn(speed);
+
+        setTimeout(()=> {
+            $('.bg4').fadeOut(speed);
+            $('.bg4').animate({
+                opacity: 1,
+            }, 300);
+            console.log($('.bg4'));
+            }, generalDelay + 1500);
+
         setTimeout(()=> {$('.our-program-tape').fadeIn(speed);}, generalDelay + 1000);
         setTimeout(()=> {$('.our-program_one').slideDown(speed);}, generalDelay + 2000);
         setTimeout(()=> {$('.our-program_one').slideUp(speed);}, generalDelay + 5000);
@@ -179,43 +171,7 @@ $('.label-wrapper-22').css({ opacity: 0 });
     }
 
     function scene4to5() {
-
-        const bg = $('.bg');
-        const width = bg.width();
-        let lineWidth = width / 6;
-        lineWidth = lineWidth < 200 ? 200 : lineWidth;
-
-        $('.bg3').width(width).height(bg.height());
-
-        const edgeLeft = (width / 2) - (lineWidth/2);
-        const edgeRight = (width / 2) + (lineWidth/2);
-        let lines = [];
-        let j = 1;
-        for (let i = 7; i > 0; i--) {
-            let even = i % 2 === 0;
-            lines.push(
-                $(`<div class="bg5 line${i} ${even ? 'even' : 'odd'}"></div>`)
-                    .width(lineWidth)
-                    .css('left', `${edgeLeft - j*lineWidth + j}px`)
-            );
-            j++;
-        }
-        lines.push(
-            $(`<div class="bg5 line8 even"></div>`)
-                .width(lineWidth)
-        );
-        j = 0;
-        for (let i = 9; i < 16; i++) {
-            let even = i % 2 === 0;
-            lines.push(
-                $(`<div class="bg5 line${i} ${even ? 'even' : 'odd'}"></div>`)
-                    .width(lineWidth)
-                    .css('left', `${edgeRight + j*lineWidth - j - 1}px`)
-            );
-            j++;
-        }
-        $('.first-screen').append(lines);
-
+        showLinesAnimation('bg5');
 
         const speedYouAndWorld = 1000;
         const generalDelayYouAndWorld = 0;
@@ -239,44 +195,11 @@ $('.label-wrapper-22').css({ opacity: 0 });
         );
 
         setTimeout(()=> {$('.phone').addClass('animate-phone-two');}, generalDelayYouAndWorld + 6000);
+        setTimeout(()=> {$('.phone').addClass('animate-phone-three');}, generalDelayYouAndWorld + 7000);
     }
 
     function scene5to6() {
-        const bg = $('.bg');
-        const width = bg.width();
-        let lineWidth = width / 6;
-        lineWidth = lineWidth < 200 ? 200 : lineWidth;
-
-        $('.bg3').width(width).height(bg.height());
-
-        const edgeLeft = (width / 2) - (lineWidth/2);
-        const edgeRight = (width / 2) + (lineWidth/2);
-        let lines = [];
-        let j = 1;
-        for (let i = 7; i > 0; i--) {
-            let even = i % 2 === 0;
-            lines.push(
-                $(`<div class="bg6 line${i} ${even ? 'even' : 'odd'}"></div>`)
-                    .width(lineWidth)
-                    .css('left', `${edgeLeft - j*lineWidth + j}px`)
-            );
-            j++;
-        }
-        lines.push(
-            $(`<div class="bg6 line8 even"></div>`)
-                .width(lineWidth)
-        );
-        j = 0;
-        for (let i = 9; i < 16; i++) {
-            let even = i % 2 === 0;
-            lines.push(
-                $(`<div class="bg6 line${i} ${even ? 'even' : 'odd'}"></div>`)
-                    .width(lineWidth)
-                    .css('left', `${edgeRight + j*lineWidth - j - 1}px`)
-            );
-            j++;
-        }
-        $('.first-screen').append(lines);
+        // showLinesAnimation('bg6');
 
         const speedWeAreHere = 1000;
         const generalDelayWeAreHere = 0;
@@ -293,13 +216,16 @@ $('.label-wrapper-22').css({ opacity: 0 });
         setTimeout(() => {$('.we-are-here-wrapper').animate({ opacity: 0 });}, generalDelayWeAreHere + 15000);
     }
     function scene6to7() {
+        showLinesAnimation('bg6');
+
         const speedMails2018 = 1000;
         const generalDelayMails2018 = 0;
 
         $('.mails-in-2018').fadeIn(speedMails2018);
         $('.sc3').css({ "opacity": 0});
         $('.sc3').css({ "z-index": 102});
-        setTimeout(() => {$(document.body).addClass('seven');}, generalDelayMails2018 + 500);
+        // setTimeout(() => {$(document.body).addClass('seven');}, generalDelayMails2018 + 500);
+        setTimeout(() => {$(document.body).addClass('four');}, generalDelayMails2018 + 500);
         setTimeout(() => {$('.sc3').animate({ opacity: 1 });}, generalDelayMails2018 + 1000);
         setTimeout(() => {$('.column__phone').slideDown(speedMails2018);}, generalDelayMails2018 + 1000);
         setTimeout(() => {$('.column__label').slideDown(speedMails2018);}, generalDelayMails2018 + 2000);
@@ -308,57 +234,26 @@ $('.label-wrapper-22').css({ opacity: 0 });
     }
 
     function scene7to8() {
-        const bg = $('.bg');
-        const width = bg.width();
-        let lineWidth = width / 6;
-        lineWidth = lineWidth < 200 ? 200 : lineWidth;
-
-        $('.bg3').width(width).height(bg.height());
-
-        $('.thank-you-label').hide();
-        $('.thank-you-text').hide();
-
-        const edgeLeft = (width / 2) - (lineWidth/2);
-        const edgeRight = (width / 2) + (lineWidth/2);
-        let lines = [];
-        let j = 1;
-        for (let i = 7; i > 0; i--) {
-            let even = i % 2 === 0;
-            lines.push(
-                $(`<div class="bg7 line${i} ${even ? 'even' : 'odd'}"></div>`)
-                    .width(lineWidth)
-                    .css('left', `${edgeLeft - j*lineWidth + j}px`)
-            );
-            j++;
-        }
-        lines.push(
-            $(`<div class="bg7 line8 even"></div>`)
-                .width(lineWidth)
-        );
-        j = 0;
-        for (let i = 9; i < 16; i++) {
-            let even = i % 2 === 0;
-            lines.push(
-                $(`<div class="bg7 line${i} ${even ? 'even' : 'odd'}"></div>`)
-                    .width(lineWidth)
-                    .css('left', `${edgeRight + j*lineWidth - j - 1}px`)
-            );
-            j++;
-        }
-        $('.first-screen').append(lines);
+        showLinesAnimation('bg7');
 
         const speedThankYou = 1000;
         const generalDelayThankYou = 0;
 
         setTimeout(()=> {$(document.body).addClass('eight');}, generalDelayThankYou + 1000);
-        if (screen.width < 600) {
-            $('#iqos-video').hide();
-            setTimeout(()=> {$('.thank-you-label').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
-            setTimeout(()=> {$('.thank-you-text').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
-            setTimeout(()=> {$('#iqos-video').fadeIn();}, generalDelayThankYou + 8000);
-            setTimeout(()=> {video.play();}, generalDelayThankYou + 8000);
+
+        if (isIOS && screen.width < 600) {
+            $('#iqos-video').remove();
+            setTimeout(()=> {$('.elka-thank-you').fadeIn();}, generalDelayThankYou + 8000);
         } else {
-            setTimeout(()=> {playOnIos();}, generalDelayThankYou + 1200);
+            if (screen.width < 600) {
+                $('#iqos-video').hide();
+                setTimeout(()=> {$('.thank-you-label').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
+                setTimeout(()=> {$('.thank-you-text').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
+                setTimeout(()=> {$('#iqos-video').fadeIn();}, generalDelayThankYou + 8000);
+                setTimeout(()=> {video.play();}, generalDelayThankYou + 8000);
+            } else {
+                setTimeout(()=> {playOnIos();}, generalDelayThankYou + 1200);
+            }
         }
 
         setTimeout(()=> {$('.thank-you').fadeIn(speedThankYou);}, generalDelayThankYou + 2000);
@@ -369,4 +264,66 @@ $('.label-wrapper-22').css({ opacity: 0 });
 
 function playOnIos() {
     $('.thank-you').append('<video autoplay muted id="iqos-video" class="iqos-video"><source src="src/video/IQOS-bg-2.mp4" type="video/mp4"></video>');
+}
+
+function changeOrientation() {
+    console.log('changeOrientation');
+    resizeLines();
+}
+
+function showLinesAnimation(bgLine) {
+    const bg = $('.bg');
+    const width = bg.width();
+    let lineWidth = width / 6;
+    lineWidth = lineWidth < 200 ? 200 : lineWidth;
+
+    $('.bg3').width(width).height(bg.height());
+
+    const edgeLeft = (width / 2) - (lineWidth/2);
+    const edgeRight = (width / 2) + (lineWidth/2);
+    let lines = [];
+    let j = 1;
+    for (let i = 7; i > 0; i--) {
+        let even = i % 2 === 0;
+        lines.push(
+            $(`<div class="${bgLine} line${i} ${even ? 'even' : 'odd'}"></div>`)
+                .width(lineWidth)
+                .css('left', `${edgeLeft - j*lineWidth + j}px`)
+        );
+        j++;
+    }
+    lines.push(
+        $(`<div class="${bgLine} line8 even"></div>`)
+            .width(lineWidth)
+    );
+    j = 0;
+    for (let i = 9; i < 16; i++) {
+        let even = i % 2 === 0;
+        lines.push(
+            $(`<div class="${bgLine} line${i} ${even ? 'even' : 'odd'}"></div>`)
+                .width(lineWidth)
+                .css('left', `${edgeRight + j*lineWidth - j - 1}px`)
+        );
+        j++;
+    }
+    $('.first-screen').append(lines);
+}
+
+function resizeLines() {
+    const bg = $('.bg');
+    const width = bg.width();
+    let lineWidth = width / 6;
+    lineWidth = lineWidth < 200 ? 200 : lineWidth;
+
+    $('.even, .odd').each(function () {
+        $(this).width(lineWidth);
+    });
+}
+function hideSpiceId() {
+    if (location.href.indexOf("spiceId=") !== -1) {
+      const currURL = window.location.href;
+      const afterDomain = currURL.substring(currURL.lastIndexOf('/') + 1);
+      const beforeQueryString = afterDomain.split("?")[0];
+      window.history.replaceState(null, null, window.location.pathname);
+    }
 }
