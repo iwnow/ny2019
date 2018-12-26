@@ -441,6 +441,17 @@
         .header-content .header-links {
             padding-right: 0;
             justify-content: space-evenly;
+        .our-program {
+            font-size: .8em;
+
+            .our-program_one {
+                h1 {
+                    font-size: 32px;
+                }
+            }
+        }
+        .our-program .our-program_three {
+            top: 46%;
         }
     }
 
@@ -449,4 +460,122 @@
     and (device-width : 736px) 
     and (orientation : landscape) {
         @include iphone();
+    }
+
+//iPhone 5
+@media screen 
+    and (device-width : 320px) 
+    and (device-height : 568px) 
+    and (orientation : portrait) {
+        @include iphone(portrait);
+    }
+
+    @media screen 
+    and (device-height : 320px) 
+    and (device-width : 568px) 
+    and (orientation : landscape) {
+        @include iphone();
+        .first-screen {
+            .label-wrapper-1 {
+                margin-top: -12px;
+            }
+            .label-wrapper-21 {
+                margin-top: 0;
+            }
+            .label-wrapper-22 {
+                padding-left: 26% !important;
+            }
+        }
+        
+        .our-program .our-program_three {
+            top: 62%;
+        }
+        body.second {
+            .hues {
+                transform: scale(0.6);
+            }
+            .photo {
+                left: 38px;
+                display: none;
+            }
+            .hue1 {
+                left: -126px;
+                top: -136px;
+            }
+            .hue2 {
+                display: none;
+            }
+            .hue3 {
+                left: 16%;
+            }
+            .caps1 {
+                top: 138px;
+            }
+            .caps2 {
+                top: 36%;
+    left: 20%;
+            }
+            .iqos {
+                top: 40%;
+                left: -14%;
+            }
+            .stik {
+                top: -16%;
+    left: 18%;
+            }
+        }
+        .third {
+            .acc1 {
+                left: 72%;
+            }
+            .acc4 {
+                left: 14%;
+            }
+            .branch2 {
+                height: 168px;
+            }
+            .label-wrapper-3 {
+                font-size: 0.8rem;
+                // margin-top: 10px;
+            }
+            .label-wrapper-3 > div:last-child {
+                font-size: .9rem;
+            }
+        }
+
+        .third {
+            .branch2 {
+                height: 100px;
+            }
+            .acc1 {
+                transform: scale(.6) translate(0, 0);
+                transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+            }
+            .acc2 {
+                transform: scale(.6) translate(0, 0);
+                transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .8s;
+            }
+            .acc3 {
+                transform: scale(.4) translate(0, 0) ;
+                transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.3s;
+            }
+            .acc4 {
+                transform: scale(.6) translate(0, 0) ;
+                transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.8s;
+            }
+            .acc5 {
+                transform: scale(.6) translate(0, 0);
+                transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+            }
+            .acc6 {
+                transform: scale(.4) translate(0, 0);
+                transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s;
+            }
+        }
+        .four {
+            .acc1, .acc2, .acc3, .acc4, .acc5, .acc6, .branch2 {
+                transform: translate(0, -600px);
+                transition: transform 1.5s ease 2s;
+            }
+        }
     }
