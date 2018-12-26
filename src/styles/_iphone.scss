@@ -1,0 +1,180 @@
+@mixin iphone($or: landscape) {
+    
+    .third {
+        .branch2 {
+            height: 100px;
+        }
+        .acc1 {
+            transform: scale(.8) translate(0, 0);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .3s;
+        }
+        .acc2 {
+            transform: scale(.8) translate(0, 0);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .8s;
+        }
+        .acc3 {
+            transform: scale(.5) translate(0, 0) ;
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.3s;
+        }
+        .acc4 {
+            transform: scale(.8) translate(0, 0) ;
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.8s;
+        }
+        .acc5 {
+            transform: scale(.8) translate(0, 0);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+        }
+        .acc6 {
+            transform: scale(.5) translate(0, 0);
+            transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.2s;
+        }
+    }
+    .four {
+        .acc1, .acc2, .acc3, .acc4, .acc5, .acc6, .branch2 {
+            transform: translate(0, -600px);
+            transition: transform 1.5s ease 2s;
+        }
+    }
+
+    @if $or == landscape {
+        .first-screen {
+            .label-wrapper-1 {
+                margin-top: -12px;
+            }
+            .label-wrapper-21 {
+                margin-top: 0;
+            }
+            .label-wrapper-22 {
+                padding-left: 26% !important;
+            }
+        }
+        
+        .our-program .our-program_three {
+            top: 62%;
+        }
+        body.second {
+            .hues {
+                transform: scale(0.6);
+            }
+            .photo {
+                left: 38px;
+                display: block;
+            }
+            .hue1 {
+                left: -108px;
+            }
+            .caps1 {
+                top: 172px;
+            }
+            .caps2 {
+                top: 26%;
+                left: 30%;
+            }
+            .iqos {
+                top: 46%;
+                left: -8%;
+            }
+            .stik {
+                top: -16%;
+                left: 22%;
+            }
+        }
+        .third {
+            .branch2 {
+                height: 168px;
+            }
+            .label-wrapper-3 > div:last-child {
+                font-size: .9rem;
+            }
+        }
+    } @else {
+    
+    }
+}
+
+//iPhone X
+@media screen 
+    and (device-width : 375px) 
+    and (device-height : 812px)
+    and (orientation : portrait) {
+        @include iphone(portrait);
+    }
+
+@media screen 
+    and (device-height : 375px) 
+    and (device-width : 812px)
+    and (orientation : landscape)
+     {
+        @include iphone();
+        
+        
+    }
+
+//iPhone 8
+@media screen 
+    and (device-width : 375px)
+    and (device-height : 667px) 
+    and (orientation : portrait) {
+        @include iphone(portrait);
+    }
+
+@media screen 
+    and (device-height : 375px) 
+    and (device-width : 667px) 
+    and (orientation : landscape) {
+        @include iphone();
+        .our-program .our-program_three {
+            top: 50%;
+        }
+        body.second {
+            .hues {
+                transform: scale(0.6);
+            }
+            .photo {
+                left: 38px;
+                display: none;
+            }
+            .hue1 {
+                left: -108px;
+            }
+            .caps1 {
+                top: 132px;
+                left: 16%;
+            }
+            .caps2 {
+                top: 26%;
+                left: 24%;
+            }
+            .iqos {
+                top: 46%;
+                left: -8%;
+            }
+            .stik {
+                top: -16%;
+                left: 26%;
+            }
+        }
+        .third {
+            .branch2 {
+                height: 168px;
+            }
+            .label-wrapper-3 > div:last-child {
+                font-size: .9rem;
+            }
+        }
+    }
+
+//iPhone 8+
+@media screen 
+    and (device-width : 414px) 
+    and (device-height : 736px) 
+    and (orientation : portrait) {
+        @include iphone(portrait);
+    }
+
+    @media screen 
+    and (device-height : 414px) 
+    and (device-width : 736px) 
+    and (orientation : landscape) {
+        @include iphone();
+    }

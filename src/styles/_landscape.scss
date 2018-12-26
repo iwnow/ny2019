@@ -472,19 +472,22 @@
     display: none !important;
   }
   body.second .photo {
-    display: none !important;
+    display: none;
   }
   body.second .hue1 {
-    top: -75px;
+    top: -100px;
     transform: scale(0.6);
   }
   body.second .iqos {
-    top: 36%;
+    top: 50%;
   }
   body.second .hue3 {
     bottom: -25%;
   }
   body.second .caps2 {
-    top: 14%;
+    top: 24%;
+  }
+  body.second .caps1 {
+    top: 124px;
   }
 }

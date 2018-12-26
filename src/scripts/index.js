@@ -18,11 +18,7 @@ $('.thank-you-label').hide();
 $('.thank-you-text').hide();
 $('.elka-thank-you').hide();
 
-if (screen.width > 700) {
-    $('.level-mobile').remove();
-} else {
-    $('.level').remove();
-}
+toggleLevel();
 
 const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -105,6 +101,12 @@ $('.label-wrapper-22').css({ opacity: 0 });
         $(document.body).addClass('loaded');
         $('.loader').css({display: 'none'});
 
+        // $('.label-wrapper-1').css('display', 'none');
+        //         $(document.body).addClass('second');
+            
+        // $('.label-wrapper-21').hide();
+        // $('.label-wrapper-22').css({opacity: 1}).show();
+
         scene2to3();
         setTimeout(() => {
             $('.label-wrapper-1').animate({
@@ -123,7 +125,8 @@ $('.label-wrapper-22').css({ opacity: 0 });
               });
         }, 4000);
 
-        // setTimeout(scene6to7, 1000);
+        //setTimeout(scene6to7, 1000);
+        
         setTimeout(scene3to4, 24000);
         setTimeout(scene4to5, 34000);
         setTimeout(scene5to6, 45000);
@@ -268,6 +271,7 @@ function playOnIos() {
 function changeOrientation() {
     console.log('changeOrientation');
     resizeLines();
+    toggleLevel();
 }
 
 function showLinesAnimation(bgLine) {
@@ -286,21 +290,22 @@ function showLinesAnimation(bgLine) {
         let even = i % 2 === 0;
         lines.push(
             $(`<div class="${bgLine} line${i} ${even ? 'even' : 'odd'}"></div>`)
-                .width(lineWidth)
+                .width(lineWidth + 2)
                 .css('left', `${edgeLeft - j*lineWidth + j}px`)
         );
         j++;
     }
     lines.push(
         $(`<div class="${bgLine} line8 even"></div>`)
-            .width(lineWidth)
+            .width(lineWidth + 2)
+            .css('left', `${edgeRight - lineWidth}px`)
     );
     j = 0;
     for (let i = 9; i < 16; i++) {
         let even = i % 2 === 0;
         lines.push(
             $(`<div class="${bgLine} line${i} ${even ? 'even' : 'odd'}"></div>`)
-                .width(lineWidth)
+                .width(lineWidth + 2)
                 .css('left', `${edgeRight + j*lineWidth - j - 1}px`)
         );
         j++;
@@ -318,6 +323,17 @@ function resizeLines() {
         $(this).width(lineWidth);
     });
 }
+
+function toggleLevel() {
+    if (screen.width > 700) {
+        $('.level-mobile').hide();
+        $('.level').show();
+    } else {
+        $('.level-mobile').show();
+        $('.level').hide();
+    }
+}
+
 function hideSpiceId() {
     if (location.href.indexOf("spiceId=") !== -1) {
       const currURL = window.location.href;
