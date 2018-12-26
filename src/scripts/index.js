@@ -17,6 +17,7 @@ $('.scene4-alter-text').hide();
 $('.thank-you-label').hide();
 $('.thank-you-text').hide();
 $('.elka-thank-you').hide();
+$('#happy-new-year').hide();
 
 toggleLevel();
 
@@ -125,13 +126,12 @@ $('.label-wrapper-22').css({ opacity: 0 });
               });
         }, 4000);
 
-        //setTimeout(scene6to7, 1000);
-        
         setTimeout(scene3to4, 24000);
         setTimeout(scene4to5, 34000);
         setTimeout(scene5to6, 45000);
         setTimeout(scene6to7, 62000);
         setTimeout(scene7to8, 71000);
+        // setTimeout(scene7to8, 1000);
     }
 
     function scene2to3() {
@@ -160,7 +160,6 @@ $('.label-wrapper-22').css({ opacity: 0 });
             $('.bg4').animate({
                 opacity: 1,
             }, 300);
-            console.log($('.bg4'));
             }, generalDelay + 1500);
 
         setTimeout(()=> {$('.our-program-tape').fadeIn(speed);}, generalDelay + 1000);
@@ -245,7 +244,10 @@ $('.label-wrapper-22').css({ opacity: 0 });
 
         if (isIOS && screen.width < 600) {
             $('#iqos-video').remove();
-            setTimeout(()=> {$('.elka-thank-you').fadeIn();}, generalDelayThankYou + 8000);
+            setTimeout(()=> {
+                $('.elka-thank-you').fadeIn();
+                $('#happy-new-year').fadeIn();
+                }, generalDelayThankYou + 8000);
         } else {
             if (screen.width < 600) {
                 $('#iqos-video').hide();

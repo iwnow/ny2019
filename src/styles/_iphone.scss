@@ -1,4 +1,272 @@
 @mixin iphone($or: landscape) {
+    .our-program {
+        font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+        position: relative;
+        background-image: url(./../img/our-program/Mobile-BG.jpg);
+        .our-program-tape {
+            background-image: url(./../img/our-program/Mobile-BG.jpg);
+        }
+    }
+    .main-header, .main-footer {
+        height: 45px;
+        a {
+            font-size: 13px;
+        }
+    }
+    .footer-content, .header-content {
+        padding: 0 10px;
+        height: 45px;
+    }
+    .header-content {
+        .logo {
+            height: auto;
+            width: 90px;
+        }
+        .header-links {
+            height: 37px;
+            display: block;
+            justify-content: space-between;
+            width: auto;
+            text-align: right;
+            a {
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
+    }
+    .footer-content {
+        img {
+            width: 30px;
+        }
+    }
+    .you-and-world-wrapper {
+        h1, h2 {
+            line-height: 36px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+    }
+    .you-and-world {
+        h3 {
+            font-size: 10px;
+        }
+
+        .phone {
+            left: -61px;
+            top: 37%;
+            transform: rotate(-15deg) scale(0.5);
+        }
+        .photo-people {
+            top: -138px;
+            left: -159px;
+            transform: scale(0.6);
+        }
+    }
+    .decoration-img {
+        &.tapes {
+            right: -8%;
+        }
+        &.tape-yellow-right {
+            right: -11%;
+        }
+        &.ball {
+            top: 21px;
+            left: 60%;
+        }
+        &.ribbon {
+            left: -500px
+        }
+    }
+    .our-program {
+        .our-program_three, .our-program_two {
+            top: 45%;
+        }
+        .our-program_one {
+            top: 55%;
+        }
+    }
+
+    .we-are-here {
+        h1, h2 {
+            font-size: 22px;
+            line-height: 36px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+    }
+    .thank-you {
+        .thank-you-wrapper {
+            padding-top: 80px;
+            h1, h2 {
+                font-size: 22px;
+                line-height: 36px;
+            }
+            h2 {
+                font-size: 18px;
+            }
+            h1.thank-you-label {
+                font-size: 46px;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .header-content .header-links {
+        padding-right: 0;
+    }
+    .our-program_one {
+        h1 {
+            font-size: 20px;
+            line-height: 30px;
+        }
+        h2 {
+            font-size: 36px;
+        }
+    }
+    .our-program .our-program_three h1 {
+        font-size: 40px;
+    }
+    .label-wrapper-3 > div {
+        line-height: 1.1;
+    }
+    .label-wrapper-3 {
+        padding: 0 20px;
+    }
+    .our-program .our-program_three h3 {
+        font-size: 19px;
+    }
+    .our-program .our-program_three h2 {
+        font-size: 22px;
+    }
+    .our-program .our-program_three h2 {
+        font-size: 32px;
+    }
+    .you-and-world {
+        .you-and-world-wrapper {
+            width: 390px;
+            padding-top: 0;
+            h1, h2 {
+                line-height: 32px;
+                font-size: 20px;
+            }
+            h2 {
+                font-size: 16px;
+            }
+        }
+        h3 {
+            font-size: 10px;
+        }
+        .tapes {
+            right: -20%;
+        }
+    }
+    .we-are-here .we-are-here-wrapper {
+        width: 300px;
+    }
+    .mails-in-2018 {
+        .decoration-icons {
+            top: 275px;
+        }
+        h1, h2 {
+            font-size: 28px;
+            line-height: 40px;
+        }
+        h2 {
+            font-size: 18px;
+            line-height: 28px;
+        }
+        .column__label {
+            h1 {
+                font-size: 24px;
+                line-height: 36px;
+            }
+            h2 {
+                font-size: 22px;
+                line-height: 34px;
+            }
+        }
+        .column__phone {
+            transform: translateX(26%);
+            width: 100%;
+        }
+        .column__phone .phone__screen {
+            position: absolute;
+            width: 143px;
+            left: 14px;
+            top: 57px;
+            height: 100%;
+            background-size: 170px;
+            background-position: center top;
+        }
+        .mails-in-2018-wrapper {
+            justify-content: end;
+            flex-direction: column-reverse;
+            img {
+                width: 170px;
+            }
+        }
+    }
+    .thank-you .thank-you-wrapper h1.thank-you-label {
+        font-size: 41px;
+        margin-bottom: 35px;
+    }
+    .thank-you .thank-you-wrapper {
+        padding-top: 120px;
+    }
+    .thank-you .thank-you-wrapper h1, .thank-you .thank-you-wrapper h2 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .thank-you .thank-you-wrapper {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 13px;
+        padding-right: 10px;
+        box-sizing: border-box;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
     .third {
         .branch2 {
@@ -170,6 +438,10 @@
     and (device-height : 736px) 
     and (orientation : portrait) {
         @include iphone(portrait);
+        .header-content .header-links {
+            padding-right: 0;
+            justify-content: space-evenly;
+        }
     }
 
     @media screen 

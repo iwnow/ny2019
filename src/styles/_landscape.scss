@@ -420,7 +420,7 @@
     left: 19%;
   }
   .third .acc1 {
-    top: -32px;
+    top: -53px;
     left: 68%;
   }
   .our-program .our-program_three h2 {
@@ -449,6 +449,9 @@
     line-height: 27px;
     font-size: 17px;
   }
+  .we-are-here h1 {
+    margin-bottom: 0;
+  }
   .thank-you .thank-you-wrapper h1 {
     font-size: 25px;
     line-height: 1.7;
@@ -457,6 +460,17 @@
   .thank-you .thank-you-wrapper h1, .thank-you .thank-you-wrapper h2 {
     line-height: 20px;
     font-size: 16px;
+  }
+  .label-wrapper-3 > div:last-child {
+    margin-top: 20px;
+    font-size: 0.72rem;
+    line-height: .7rem;
+  }
+  .you-and-world h1, .you-and-world h2 { line-height: 23px; font-size: 18px; }
+  .you-and-world .you-and-world-wrapper { width: 365px; height: auto; }
+  .our-program .our-program-wrapper {
+    top: 66%;
+    line-height: 1.5;
   }
 }
 
