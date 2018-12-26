@@ -54,8 +54,8 @@
 
         .phone {
             left: -61px;
-            top: 37%;
-            transform: rotate(-15deg) scale(0.5);
+            top: 40%;
+            transform: rotate(-15deg) scale(0.4);
         }
         .photo-people {
             top: -138px;
@@ -166,7 +166,7 @@
     }
     .you-and-world {
         .you-and-world-wrapper {
-            width: 390px;
+            width: 370px;
             padding-top: 0;
             h1, h2 {
                 line-height: 32px;
@@ -469,6 +469,19 @@
     and (device-height : 568px) 
     and (orientation : portrait) {
         @include iphone(portrait);
+        .you-and-world .you-and-world-wrapper {
+            width: 320px;
+            top: 61%;
+            padding-top: 0;
+            h1 {
+                margin-bottom: 0;
+            }
+        }
+        .you-and-world .you-and-world-wrapper h1,
+        .you-and-world .you-and-world-wrapper h2 {
+            line-height: 28px;
+            font-size: 18px;
+        }
     }
 
     @media screen 
