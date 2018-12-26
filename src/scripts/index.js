@@ -254,7 +254,7 @@ $('.label-wrapper-22').css({ opacity: 0 });
                 setTimeout(()=> {$('.thank-you-label').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
                 setTimeout(()=> {$('.thank-you-text').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
                 setTimeout(()=> {$('#iqos-video').fadeIn();}, generalDelayThankYou + 8000);
-                setTimeout(()=> {video.play();}, generalDelayThankYou + 8000);
+                setTimeout(()=> {video.play(); }, generalDelayThankYou + 8000);
             } else {
                 setTimeout(()=> {playOnIos();}, generalDelayThankYou + 1200);
             }
