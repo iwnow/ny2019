@@ -128,10 +128,10 @@ $('.label-wrapper-22').css({ opacity: 0 });
         //setTimeout(scene6to7, 1000);
         
         setTimeout(scene3to4, 24000);
-        // setTimeout(scene4to5, 34000);
-        // setTimeout(scene5to6, 45000);
-        // setTimeout(scene6to7, 62000);
-        // setTimeout(scene7to8, 71000);
+        setTimeout(scene4to5, 34000);
+        setTimeout(scene5to6, 45000);
+        setTimeout(scene6to7, 62000);
+        setTimeout(scene7to8, 71000);
     }
 
     function scene2to3() {

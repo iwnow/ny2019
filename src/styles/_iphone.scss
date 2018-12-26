@@ -170,6 +170,18 @@
     and (device-height : 736px) 
     and (orientation : portrait) {
         @include iphone(portrait);
+        .our-program {
+            font-size: .8em;
+
+            .our-program_one {
+                h1 {
+                    font-size: 32px;
+                }
+            }
+        }
+        .our-program .our-program_three {
+            top: 46%;
+        }
     }
 
     @media screen 
