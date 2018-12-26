@@ -123,12 +123,12 @@ $('.label-wrapper-22').css({ opacity: 0 });
               });
         }, 4000);
 
-        setTimeout(scene6to7, 1000);
-        // setTimeout(scene3to4, 24000);
-        // setTimeout(scene4to5, 34000);
-        // setTimeout(scene5to6, 45000);
-        // setTimeout(scene6to7, 62000);
-        // setTimeout(scene7to8, 71000);
+        // setTimeout(scene6to7, 1000);
+        setTimeout(scene3to4, 24000);
+        setTimeout(scene4to5, 34000);
+        setTimeout(scene5to6, 45000);
+        setTimeout(scene6to7, 62000);
+        setTimeout(scene7to8, 71000);
     }
 
     function scene2to3() {
@@ -224,8 +224,7 @@ $('.label-wrapper-22').css({ opacity: 0 });
         $('.mails-in-2018').fadeIn(speedMails2018);
         $('.sc3').css({ "opacity": 0});
         $('.sc3').css({ "z-index": 102});
-        // setTimeout(() => {$(document.body).addClass('seven');}, generalDelayMails2018 + 500);
-        setTimeout(() => {$(document.body).addClass('four');}, generalDelayMails2018 + 500);
+        setTimeout(() => {$(document.body).addClass('seven');}, generalDelayMails2018 + 500);
         setTimeout(() => {$('.sc3').animate({ opacity: 1 });}, generalDelayMails2018 + 1000);
         setTimeout(() => {$('.column__phone').slideDown(speedMails2018);}, generalDelayMails2018 + 1000);
         setTimeout(() => {$('.column__label').slideDown(speedMails2018);}, generalDelayMails2018 + 2000);
