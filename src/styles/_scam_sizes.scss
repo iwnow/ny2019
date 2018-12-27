@@ -1,0 +1,46 @@
+@media screen 
+    and (min-width: 1880px) 
+    and (min-height: 650px) 
+    and (max-height: 800px) {
+
+        .thank-you {
+            .iqos-video {
+                width: 100%;
+            }
+        }
+
+        .you-and-world .photo-people {
+            left: -50px;
+        }
+
+        .third {
+            .label-wrapper-3 {
+                margin-top: 5%;
+            }
+
+            .acc1 {
+                top: 16%;
+                left: 75%;
+            }
+
+            .acc3 {
+                top: 26%;
+                left: 8%;
+            }
+
+            .acc4 {
+                top: 4%;
+                left: 24%;
+            }
+
+            .acc5 {
+                top: -2%;
+                right: 2%;
+            }
+
+            .acc6 {
+                top: 30%;
+                right: 4%;
+            }
+        }
+    }
