@@ -22,6 +22,9 @@ export const api = {
             const xhr = new XMLHttpRequest();
             xhr.open("GET", `https://iqos.interaxions.ru/rest/ny_info/${spiceId}/`);
             xhr.onload = () => resolve(JSON.parse(xhr.responseText));
+            xhr.onloadend = function() {
+                if(xhr.status == 404) reject(xhr.statusText);
+            };
             xhr.onerror = () => reject(xhr.statusText);
             xhr.send();
         });

@@ -18,6 +18,7 @@ $('.thank-you-label').hide();
 $('.thank-you-text').hide();
 $('.elka-thank-you').hide();
 $('#happy-new-year').hide();
+$('#alter-text').hide();
 
 toggleLevel();
 
@@ -43,9 +44,17 @@ const spiceId = urlParams.get('id');
 $('.label-wrapper-22').css({ opacity: 0 });
 
 (() => {
-    api.getUser(spiceId).then( result => {
-        start(result);
-    }).catch(console.error);
+    if (!spiceId) {
+        $('.loader').css({display: 'none'});
+        scene7to8(true);
+    } else {
+        api.getUser(spiceId).then( result => {
+            start(result);
+        }).catch(() => {
+            $('.loader').css({display: 'none'});
+            scene7to8(true);
+        });
+    }
 
 
     function start(user) {
@@ -233,13 +242,19 @@ $('.label-wrapper-22').css({ opacity: 0 });
         setTimeout(() => {$('.column__phone').addClass('next-position');}, generalDelayMails2018 + 4000);
     }
 
-    function scene7to8() {
+    function scene7to8(isSpiceIdEmpty) {
+        isSpiceIdEmpty = false || isSpiceIdEmpty;
         showLinesAnimation('bg7');
 
         const speedThankYou = 1000;
         const generalDelayThankYou = 0;
 
         setTimeout(()=> {$(document.body).addClass('eight');}, generalDelayThankYou + 1000);
+
+        if (isSpiceIdEmpty) {
+            $('#thank-you-main-text').hide();
+            $('#alter-text').slideDown();
+        }
 
         if (isIOS && screen.width < 600) {
             $('#iqos-video').remove();
@@ -249,13 +264,13 @@ $('.label-wrapper-22').css({ opacity: 0 });
                 }, generalDelayThankYou + 8000);
         } else {
             if (screen.width < 600) {
-                $('#iqos-video').hide();
-                setTimeout(()=> {$('.thank-you-label').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
-                setTimeout(()=> {$('.thank-you-text').fadeOut(speedThankYou);}, generalDelayThankYou + 8000);
-                setTimeout(()=> {$('#iqos-video').fadeIn();}, generalDelayThankYou + 8000);
-                setTimeout(()=> {video.play(); }, generalDelayThankYou + 8000);
+                $('#iqos-video').remove();
+                setTimeout(()=> {
+                    $('.elka-thank-you').fadeIn();
+                    $('#happy-new-year').fadeIn();
+                }, generalDelayThankYou + 8000);
             } else {
-                setTimeout(()=> {playOnIos();}, generalDelayThankYou + 1200);
+                setTimeout(()=> {playVideo();}, generalDelayThankYou + 1200);
             }
         }
 
@@ -265,7 +280,7 @@ $('.label-wrapper-22').css({ opacity: 0 });
     }
 })();
 
-function playOnIos() {
+function playVideo() {
     $('.thank-you').append('<video autoplay muted id="iqos-video" class="iqos-video"><source src="src/video/IQOS-bg-2.mp4" type="video/mp4"></video>');
 }
 

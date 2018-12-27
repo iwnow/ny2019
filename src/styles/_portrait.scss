@@ -248,6 +248,17 @@
   .mails-in-2018 .column__phone {
     margin-bottom: -60px;
   }
+
+  .mails-in-2018 .column__label {
+    h2 {
+      font-size: 18px !important;
+      line-height: 30px !important;
+    }
+    h1 {
+      font-size: 21px !important;
+      line-height: 28px !important;
+    }
+  }
   .thank-you .thank-you-wrapper h1.thank-you-label {
     font-size: 38px;
   }
@@ -257,5 +268,15 @@
   .you-and-world .you-and-world-wrapper {
     width: 375px;
     padding-top: 10px;
+  }
+  .mails-in-2018 .column__label {
+    h2 {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    h1 {
+      font-size: 21px;
+      line-height: 28px;
+    }
   }
 }
