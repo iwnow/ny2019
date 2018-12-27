@@ -154,3 +154,23 @@
     }
   }
 }
+
+
+@media screen and (min-width: 1300px) and (min-height: 700px) {
+  .mails-in-2018 .column__phone .phone__screen {
+    width: 277px;
+    left: 26px;
+    top: 107px;
+    background-size: 345px;
+  }
+  .mails-in-2018 .mails-in-2018-wrapper img {
+    width: 325px;
+  }
+  .mails-in-2018 .column__phone.next-position .phone__screen {
+    background-position: center bottom;
+  }
+  .label-wrapper-3 > div {
+    line-height: 1.8em;
+    width: 600px;
+  }
+}

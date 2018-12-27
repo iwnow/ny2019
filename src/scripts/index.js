@@ -85,6 +85,7 @@ $('.label-wrapper-22').css({ opacity: 0 });
                 $('.our-program-wrapper-silver').remove();
             }
         }
+
         if (user && user.vouchers && user.vouchers > 0) {
             $('.you-and-world-alter-text').hide();
             $('#vouchers').text(user.vouchers_text);
@@ -111,11 +112,25 @@ $('.label-wrapper-22').css({ opacity: 0 });
         $(document.body).addClass('loaded');
         $('.loader').css({display: 'none'});
 
-        // $('.label-wrapper-1').css('display', 'none');
+
+        ////DEBUG
+        // setTimeout(() => {
+        //     $('.label-wrapper-1').animate({
+        //         opacity: 0,
+        //       }, 500, function() {
+        //         $('.label-wrapper-1').css('display', 'none');
         //         $(document.body).addClass('second');
-            
-        // $('.label-wrapper-21').hide();
-        // $('.label-wrapper-22').css({opacity: 1}).show();
+        //         setTimeout(() => {
+        //             $('.label-wrapper-21').animate({
+        //                 opacity: 0,
+        //                 }, 500, function() {
+        //                 });
+        //
+        //         }, 100);
+        //       });
+        // }, 200);
+        // $('.hues').css({display:'none'});
+
 
         scene2to3();
         setTimeout(() => {
@@ -210,8 +225,6 @@ $('.label-wrapper-22').css({ opacity: 0 });
     }
 
     function scene5to6() {
-        // showLinesAnimation('bg6');
-
         const speedWeAreHere = 1000;
         const generalDelayWeAreHere = 0;
 
@@ -262,14 +275,14 @@ $('.label-wrapper-22').css({ opacity: 0 });
             setTimeout(()=> {
                 $('.elka-thank-you').fadeIn();
                 $('#happy-new-year').fadeIn();
-                }, generalDelayThankYou + 8000);
+                }, generalDelayThankYou + 10000);
         } else {
             if (screen.width < 600) {
                 $('#iqos-video').remove();
                 setTimeout(()=> {
                     $('.elka-thank-you').fadeIn();
                     $('#happy-new-year').fadeIn();
-                }, generalDelayThankYou + 8000);
+                }, generalDelayThankYou + 10000);
             } else {
                 setTimeout(()=> {playVideo();}, generalDelayThankYou + 1200);
             }

@@ -80,7 +80,8 @@
   }
   .our-program {
     .our-program_three, .our-program_two {
-      top: 45%;
+      top: 50%;
+      width: 95%;
     }
     .our-program_one {
       top: 55%;
@@ -128,9 +129,6 @@
   }
   .our-program .our-program_three h1 {
     font-size: 40px;
-  }
-  .label-wrapper-3 > div {
-    line-height: 1.1;
   }
   .label-wrapper-3 {
     padding: 0 20px;
@@ -281,3 +279,4 @@
     }
   }
 }
+

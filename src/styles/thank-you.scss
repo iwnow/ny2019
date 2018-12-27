@@ -109,3 +109,13 @@
     transition: transform .6s linear;
   }
 }
+
+@media screen and (min-width: 1300px) and (min-height: 700px) {
+  .thank-you .iqos-video {
+    max-width: 1450px;
+    min-height: 105%;
+  }
+  .thank-you .thank-you-wrapper {
+    height: 100%;
+  }
+}

@@ -1081,3 +1081,12 @@ body.second {
 		height: 175px;
 	}
 }
+
+@media screen and (min-width: 1300px) and (min-height: 600px) {
+	.label-wrapper-22 {
+		width: 600px;
+		margin: 0 auto;
+		margin-left: 120px;
+		display: block;
+	}
+}

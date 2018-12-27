@@ -80,7 +80,8 @@
   }
   .our-program {
     .our-program_three, .our-program_two {
-      top: 45%;
+      top: 50%;
+      width: 95%;
     }
     .our-program_one {
       top: 55%;
@@ -148,9 +149,6 @@
   }
   .our-program .our-program_three h1 {
     font-size: 40px;
-  }
-  .label-wrapper-3 > div {
-    line-height: 1.1;
   }
   .label-wrapper-3 {
     padding: 0 20px;
@@ -313,13 +311,10 @@
         margin-top: 0;
       }
       .label-wrapper-22 {
-        padding-left: 26% !important;
+        padding-left: 32% !important;
       }
     }
 
-    .our-program .our-program_three {
-      top: 62%;
-    }
     body.second {
       .hues {
         transform: scale(0.6);
@@ -385,5 +380,23 @@ and (orientation : portrait) {
     h1 {
       margin-bottom: 0;
     }
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 411px) and (min-height: 731px){
+  .our-program .our-program_three {
+    top: 45%;
+  }
+}
+
+@media screen and (orientation: portrait) and (min-width: 600px) and (min-height: 800px){
+  .mails-in-2018 .column__phone {
+    margin-bottom: -130px;
+  }
+  .mails-in-2018 .mails-in-2018-wrapper .column__label {
+    margin-left: -300px;
+  }
+  .mails-in-2018 .mails-in-2018-wrapper .column__phone {
+    margin-left: 125px;
   }
 }

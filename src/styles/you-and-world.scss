@@ -226,3 +226,14 @@
     left: 4%;
   }
 }
+
+@media screen and (min-width: 1300px) and (min-height: 700px) {
+  .you-and-world {
+    .photo-people {
+      left: -4%;
+    }
+    .box {
+      right: 2%;
+    }
+  }
+}

@@ -80,10 +80,8 @@
     }
     .our-program {
         .our-program_three, .our-program_two {
-            top: 45%;
-        }
-        .our-program_one {
-            top: 55%;
+            top: 50%;
+            width: 95%;
         }
     }
 
@@ -154,9 +152,6 @@
     }
     .our-program .our-program_three h1 {
         font-size: 40px;
-    }
-    .label-wrapper-3 > div {
-        line-height: 1.1;
     }
     .label-wrapper-3 {
         padding: 0 20px;
@@ -319,13 +314,10 @@
                 margin-top: 0;
             }
             .label-wrapper-22 {
-                padding-left: 26% !important;
+                padding-left: 32% !important;
             }
         }
-        
-        .our-program .our-program_three {
-            top: 62%;
-        }
+
         body.second {
             .hues {
                 transform: scale(0.6);
@@ -364,6 +356,9 @@
     } @else {
     
     }
+    .our-program .our-program-wrapper {
+        height: auto;
+    }
 }
 
 //iPhone X
@@ -380,8 +375,15 @@
     and (orientation : landscape)
      {
         @include iphone();
-        
-        
+        .we-are-here .we-are-here-wrapper {
+            width: 450px;
+        }
+
+        .you-and-world {
+            .phone {
+                top: 13%;
+            }
+        }
     }
 
 //iPhone 8
@@ -397,9 +399,6 @@
     and (device-width : 667px) 
     and (orientation : landscape) {
         @include iphone();
-        .our-program .our-program_three {
-            top: 50%;
-        }
         body.second {
             .hues {
                 transform: scale(0.6);
@@ -434,6 +433,12 @@
             }
             .label-wrapper-3 > div:last-child {
                 font-size: .9rem;
+            }
+        }
+        .we-are-here .we-are-here-wrapper {
+            h1, h2 {
+                font-size: 18px;
+                line-height: 23px;
             }
         }
     }
@@ -491,6 +496,9 @@
         .thank-you .thank-you-wrapper {
             padding-top: 72px;
         }
+        .thank-you .thank-you-wrapper h1.thank-you-label {
+            font-size: 38px;
+        }
     }
 
     @media screen 
@@ -506,12 +514,15 @@
                 margin-top: 0;
             }
             .label-wrapper-22 {
-                padding-left: 26% !important;
+                padding-left: 32% !important;
             }
         }
         
         .our-program .our-program_three {
-            top: 62%;
+            h1 {
+                margin-bottom: 21px;
+            }
+            top: 50%;
         }
         body.second {
             .hues {
@@ -601,4 +612,33 @@
                 transition: transform 1.5s ease 2s;
             }
         }
+        .we-are-here .we-are-here-wrapper {
+            h1, h2 {
+                font-size: 16px;
+                line-height: 24px;
+            }
+        }
+
+        .thank-you .thank-you-wrapper h1, .thank-you .thank-you-wrapper h2 {
+            font-size: 17px;
+            line-height: 20px;
+        }
+        .thank-you .thank-you-wrapper h1.thank-you-label {
+            font-size: 38px;
+            margin-bottom: 14px;
+        }
+
     }
+
+
+@media screen
+and (device-height : 375px)
+and (device-width : 667px)
+and (orientation : landscape)
+{
+    .you-and-world {
+        .phone {
+            top: 13%;
+        }
+    }
+}

@@ -165,7 +165,8 @@
       }
 
       .our-program_three {
-        top: 44%;
+          font-size: 23px;
+          width: 80%;
 
         h2 {
           line-height: 1.4em;
@@ -288,8 +289,14 @@
       }
     }
   }
-
-    
+  .third .label-wrapper-22 {
+    line-height: 1.1;
+    font-size: 37px;
+    font-family: NOTO_SANS_EXTLIGHT_REGULAR;
+  }
+  .our-program-wrapper {
+    top: 72%
+  }
 }
 
 @media screen and (orientation:portrait) and (max-width: 480px) {
@@ -403,7 +410,9 @@
         transition: transform 1.5s ease 2s;
     }
 }
-
+  .our-program-wrapper {
+    top: 72%
+  }
 }
 
 //iphone 5
@@ -435,11 +444,7 @@
     margin: 0;
     font-size: .65em;
   }
-  .our-program .our-program_three {
-    top: 75%;
-  }
   .our-program .our-program-wrapper {
-    top: 85%;
     line-height: 1.5;
   }
   .you-and-world .tapes {
@@ -469,12 +474,14 @@
   .you-and-world h1, .you-and-world h2 { line-height: 23px; font-size: 18px; }
   .you-and-world .you-and-world-wrapper { width: 365px; height: auto; }
   .our-program .our-program-wrapper {
-    top: 66%;
     line-height: 1.5;
   }
   .thank-you .thank-you-wrapper {
     padding-top: 120px;
     width: 100%;
+  }
+  .our-program-wrapper {
+    top: 72%
   }
 }
 
@@ -507,5 +514,8 @@
   }
   body.second .caps1 {
     top: 124px;
+  }
+  .our-program-wrapper {
+    top: 72%
   }
 }
