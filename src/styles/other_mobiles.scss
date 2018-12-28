@@ -400,3 +400,94 @@ and (orientation : portrait) {
     margin-left: 125px;
   }
 }
+
+
+
+
+/* GALAXY */
+//original: 412 x 732
+//landscape: 640 x 230
+//portrait: 374 x 507
+
+
+@media screen
+and (orientation: portrait)
+and (min-width: 360px) and (min-height: 500px)
+and (max-width: 410px) and (max-height: 610px) {
+  .label-wrapper-3 > div {
+    margin-top: 30px;
+  }
+  .you-and-world h1, .you-and-world h2 {
+    margin-bottom: 10px;
+  }
+  .you-and-world h1 {
+    margin-top: 50px;
+  }
+  .mails-in-2018 .column__label h2 {
+    margin-bottom: 10px;
+    font-size: 14px !important;
+    line-height: 25px !important;
+  }
+  .thank-you .thank-you-wrapper {
+    height: 100%;
+  }
+}
+
+@media screen
+and (orientation: landscape)
+and (min-width: 640px) and (min-height: 230px)
+and (max-width: 700px) and (max-height: 400px) {
+  .label-wrapper-1, .label-wrapper-21, .label-wrapper-22 {
+    transform: scale(0.6);
+  }
+  body.second .label-wrapper-22 {
+    padding-left: 171px !important;
+  }
+  .third .label-wrapper-3 {
+    margin-top: 30px;
+  }
+  .you-and-world h1, .you-and-world h2 {
+    line-height: 16px;
+    font-size: 14px;
+  }
+  .you-and-world h3 {
+    font-size: 8px;
+  }
+  .we-are-here h1, .we-are-here h2 {
+    line-height: 22px;
+    font-size: 16px;
+  }
+  .mails-in-2018 .column__label h1, .mails-in-2018 .column__label h2 {
+    line-height: 20px;
+    font-size: 18px;
+  }
+  .mails-in-2018 h1, .mails-in-2018 h2 {
+    margin-bottom: 13px;
+  }
+  .thank-you .thank-you-wrapper {
+    padding-top: 0;
+  }
+  .thank-you .thank-you-wrapper h1.thank-you-label {
+    line-height: 20px;
+    font-size: 30px;
+    margin-top: -2px;
+  }
+  .thank-you .thank-you-wrapper h1, .thank-you .thank-you-wrapper h2 {
+    line-height: 15px;
+    font-size: 12px;
+    max-width: 355px;
+  }
+  .thank-you .thank-you-wrapper h1 {
+    margin-bottom: 15px;
+  }
+  .mails-in-2018 .column__label h1, .mails-in-2018 .column__label h2 {
+    line-height: 20px;
+    font-size: 16px;
+  }
+  .we-are-here h1 {
+    margin-bottom: 10px;
+  }
+  .we-are-here h2 {
+    margin-bottom: 0;
+  }
+}
